@@ -13,8 +13,10 @@ function headerShow(winTop){
   if(window.innerWidth > 1200){
     if(winTop >= aboutTop){
       header.style.left= '0';
+      header.style.opacity= 1;
     } else {
       header.style.left= '-100%';
+      header.style.opacity= 0;
     }
   } 
 

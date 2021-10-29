@@ -152,24 +152,29 @@ function thanksBtnClose() {
 thanksCloseBtn.addEventListener('click', thanksBtnClose);
 
 //마우스 따라다니는 효과
+if ( window.innerWidth > 1200) {
+  const mouseCircle = document.createElement('div');
+  mouseCircle.className = 'mouse-circle';
+  document.body.appendChild(mouseCircle);
 
-const mouseCircle = document.createElement('div');
-mouseCircle.className = 'mouse-circle';
-document.body.appendChild(mouseCircle);
-
- //마우스 커서 위치 담는 변수
-let mouseX = 0;
-let mouseY = 0;
-
-function getMousePosition(e) {
-  let eobj = window.event ? window.event : e; //IE, FF에 따라 이벤트 처리
-  mouseX = eobj.clientX;
-  mouseY = eobj.clientY + document.documentElement.scrollTop;
-
-  mouseCircle.style.left = mouseX + 15 + 'px';
-  mouseCircle.style.top = mouseY + 15 +'px';
-}
   
+
+
+
+  //마우스 커서 위치 담는 변수
+  let mouseX = 0;
+  let mouseY = 0;
+
+  function getMousePosition(e) {
+    let eobj = window.event ? window.event : e; //IE, FF에 따라 이벤트 처리
+    mouseX = eobj.clientX;
+    mouseY = eobj.clientY + document.documentElement.scrollTop;
+
+    mouseCircle.style.left = mouseX + 15 + 'px';
+    mouseCircle.style.top = mouseY + 15 +'px';
+  }
+  document.onmousemove = getMousePosition;
+}
 // function moveImg(){
 //   // 이미지 위치 파악하기
 //   let m_x = parseInt(document.querySelector('.mouse-circle').style.left.replace('px', ''));
@@ -187,7 +192,7 @@ function getMousePosition(e) {
 //   // 이미지를 기준으로 그 이미지에서 커서가 얼마나 떨어져 있는지 여부
 // }
 
-document.onmousemove = getMousePosition; // 마우스가 움직이면 getMousePosition 함수 실행
+
 // setInterval("moveImg()", 50); // moveImg 함수 반복 실행하여 이미지 움직이기
 
 

@@ -1,0 +1,77 @@
+
+html {
+  font-size: 7px;
+}
+#about .inner {
+  justify-content: center;
+}
+#about .inner h3 {
+  margin-bottom: 130px;
+}
+#about .memo .box {
+  width: 33%;
+  height: 247px;
+  padding: 33px 20px;
+}
+#about .memo .box {
+  width: 100%;
+}
+#portfolio h3 {
+  padding-top: 30px;
+}
+#portfolio .portfolio-content {
+  flex-direction: column;
+  padding: 150px 0 150px
+}
+#portfolio .portfolio-content .portfolio-text {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#portfolio .portfolio-content:nth-of-type(2) .portfolio-text {
+  text-align: left;
+}
+#portfolio .portfolio-content .portfolio-text .title {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#portfolio .portfolio-content .portfolio-text .title h3 {
+  margin-right: 20px;
+  display: inline;
+}
+#portfolio .portfolio-content .portfolio-text .title p {
+  display: inline;
+}
+#portfolio .portfolio-content .portfolio-text .description {
+  width: 50%;
+}
+#portfolio .portfolio-content .portfolio-text p:last-of-type {
+  margin-bottom: 0;
+}
+#portfolio .portfolio-content .portfolio-text .portfolio-link {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+}
+#portfolio .portfolio-content .portfolio-images {
+  width: 100%;
+}
+.portfolio-more ul li {
+  width: 220px;
+  height: 300px;
+}
+#contact .inner .wrap {
+  flex-direction: column;
+  align-items: center;
+}
+#contact .inner div p {
+  text-align: center;
+}
+#contact form {
+  width: 400px;
+  /* height: 365px; */
+}
+#contact form button {
+  padding: 0;
+  margin-top: 0;
+}

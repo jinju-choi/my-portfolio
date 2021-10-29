@@ -1,5 +1,4 @@
 
-
 window.onscroll = function() {
   windowY = Math.floor(window.scrollY || document.documentElement.scrollTop);
   headerShow(windowY);

@@ -13,12 +13,12 @@ new Swiper('.portfolio .mySwiper', {
 if(window.innerWidth > 798) {
   new Swiper('.portfolio-more .swiper-container', {
     loop: true,
-    // autoplay: true,
+    autoplay: true,
     slidesPerView: 4,
   });
 }
 
-if(window.innerWidth < 798) {
+if(window.innerWidth < 480) {
   new Swiper('.portfolio-more .swiper-container', {
     loop: true,
     autoplay: true,

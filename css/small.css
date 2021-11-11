@@ -15,25 +15,25 @@ html {
 #about .container:nth-child(1) {
   height: 100vh;
 }
-#about .inner.memo .wrap {
-  flex-wrap: wrap;
-}
-#about .inner h3 .small-block {
+#about .small-block {
   display: block;
 }
-#about .memo .box {
+#about .intro-second .wrap {
+  flex-wrap: wrap;
+}
+#about .intro-second .box {
   width: 85%;
   height: auto;
   padding: 19px 20px;
 }
-#about .memo div h4 {
+#about .intro-second .subject {
   font-size: 4.0rem;
   margin-bottom: 10px;
 }
-#about .memo div ul li {
+#about .intro-second .box ul li {
   font-size: 2.4rem;
 }
-#about .memo div.todo {
+#about .intro-second .box--todo {
   transform: translate(0) rotate(-3deg);
 }
 #about .skill ul li {

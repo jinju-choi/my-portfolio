@@ -12,9 +12,9 @@
   <!-- css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/myname.css">
+  <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" media="(max-width: 1200px)" href="css/medium.css">
   <link rel="stylesheet" media="(max-width: 1025px)" href="css/small-medium.css">
   <link rel="stylesheet" media="(max-width: 767px)" href="css/small.css">   
@@ -41,7 +41,9 @@
 <body>
   <!-- =============== header ======================== -->
   <header>
-    <h1>jinju<span class="block">choi</span></h1>
+    <h1 class="logo">
+      <a href="">jinju<span class="block">choi</span></a>
+    </h1>
     <div class="gnb">
       <ul>
         <li><a href="javascript:void(0)" class="font-bold active">Home</a></li>
@@ -57,9 +59,9 @@
       </label>
     </div>
     <div class="hambuger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span class="hambuger__item"></span>
+      <span class="hambuger__item"></span>
+      <span class="hambuger__item"></span>
     </div>
   </header>
 
@@ -67,21 +69,21 @@
   <section id="home">
     <div class="inner">
       <div class="title">
-        <h2 class="title-start-ani">
-          <span>J</span>
-          <span>I</span>
-          <span>N</span>
+        <h2 class="title__text">
+          <span class="title__item">J</span>
+          <span class="title__item">I</span>
+          <span class="title__item">N</span>
           &nbsp;
-          <span>J</span>
-          <span>U</span>
+          <span class="title__item">J</span>
+          <span class="title__item">U</span>
           &nbsp;
-          <span>C</span>
-          <span>H</span>
-          <span>O</span>
-          <span>I</span>
+          <span class="title__item">C</span>
+          <span class="title__item">H</span>
+          <span class="title__item">O</span>
+          <span class="title__item">I</span>
         </h2>
       </div>
-      <div>
+      <div class="title__img">
         <div class="smile">
           <img src="img/smile-large.png" alt="smile-img">
         </div>
@@ -94,26 +96,28 @@
   <!-- ================= about ======================== -->
   <section id="about">
     <div class="container">
-      <div class="inner intro">
-        <p>
+      <div class="inner intro-first">
+        <p class="intro__sub">
           "뜨거운 열정보다 중요한 것은 지속적인 열정이다" <br/> 
           -Mark zuckerberg-
         </p>
-        <h3 class="up-on-scroll">
-          <strong class="text-dot"><span>상</span><span>상</span></strong>하는 것을 구현하고,
+        <h3 class="intro__main up-on-scroll">
+          <strong class="text--dot"><span>상</span><span>상</span></strong>하는 것을 구현하고,
           <span class="small-block"></span> 
-          꾸준한 <strong class="text-dot"><span>열</span><span>정</span></strong>을 지닌
-          <span class="block">웹 개발자 <strong class="text-point"> 최진주</strong> 입니다.</span>
+          꾸준한 
+          <strong class="text--dot"><span>열</span><span>정</span></strong>을 지닌
+          <span class="block"></span>
+          웹 개발자 <strong class="text--point"> 최진주</strong> 입니다.
         </h3>
       </div>
     </div>
     <div class="container">
-      <div class="inner memo">
+      <div class="inner intro-second">
         <h3 class="h3-font up-on-scroll">About Me</h3>
         <div class="wrap">
 
-          <div class="box good up-on-scroll to-left delay-1">
-            <h4>Good at!</h4>
+          <div class="box box--good up-on-scroll to-left delay-1">
+            <h4 class="subject">Good at!</h4>
             <ul>
               <li>맡은 일은 책임감 있게 끝까지 검토하기.</li>
               <li>세세한 부분을 잘 캐치하기.</li>
@@ -122,8 +126,8 @@
             </ul>
           </div>
 
-          <div class="box todo up-on-scroll to-left delay-0">
-            <h4>Want to do!</h4>
+          <div class="box box--todo up-on-scroll to-left delay-0">
+            <h4 class="subject">Want to do!</h4>
             <ul>
               <li>모르는 것, 배울 것 항상 메모하는 습관 기르기.</li>
               <li>트렌드에 맞는 기술들 꾸준히 배우기.</li>
@@ -132,8 +136,8 @@
             </ul>  
           </div>
 
-          <div class="box favorite up-on-scroll to-right delay-2">
-            <h4>Favorite thing!</h4>
+          <div class="box box--favorite up-on-scroll to-right delay-2">
+            <h4 class="subject">Favorite thing!</h4>
             <ul>
               <li>1. 낚시하기🎣</li>
               <li>2. 사진찍기📷</li>
@@ -173,7 +177,7 @@
           <div class="portfolio-images">
             <div class="portfolio-ratio swiper mySwiper">
               <ul class="swiper-wrapper">
-                <li class="swiper-slide"><img src="./img/starbucks_logo.jpg" alt="starbucks-logo"></li>
+                <li class="swiper-slide"><img src="./img/lirikos.png" alt="lirikos-logo"></li>
                 <li class="swiper-slide"><img src="./img/pf_starbucks_2.gif" alt="starbucks-site-gif"></li>
                 <li class="swiper-slide"><img src="./img/pf_starbucks_3.gif" alt="starbucks-site-gif"></li>
               </ul>
@@ -184,8 +188,8 @@
           </div>
           <div class="portfolio-text">
             <span class="title">
-              <h4 class="bold_text">STARBUCKS</h4>
-              <p class="date">2021.08 - 2021.08</p>
+              <h4 class="bold_text">lirikos</h4>
+              <p class="date">2021.09 - 2021.09</p>
             </span>
             <span class="description">
               <p>
@@ -194,12 +198,12 @@
               </p>
               <p class="portfolio-skill">
                 <strong>Skill</strong> 
-                HTML, CSS, JAVASCRIPT
+                HTML, SCSS, JAVASCRIPT
               </p>
             </span>
             <span class="portfolio-link">
-              <a href="https://github.com/jinju-choi/starbucks" target="_blank">GitHub</a>
-              <a href="https://portfolio-starbuck-clone.netlify.app" target="_blank" class="portfolio-view">view</a>
+              <a href="https://github.com/jinju-choi/portfolio-lirikos" target="_blank">GitHub</a>
+              <a href="https://github.com/jinju-choi/portfolio-lirikos" target="_blank" class="portfolio-view">view</a>
             </span>
           </div>
         </div>
@@ -288,12 +292,12 @@
           </li>
 
           <li class="swiper-slide">
-            <a href="" target="_blank" class="go-link">
-              <img src="./img/lirikos.png" alt="lirikos-logo">
+            <a href="https://portfolio-starbuck-clone.netlify.app" target="_blank" class="go-link">
+              <img src="./img/starbucks_logo.jpg" alt="starbucks-logo">
             </a>
-            <h4>Lirikos</h4>
+            <h4>starbucks</h4>
             <p>site clone</p>
-            <a href="https://github.com/jinju-choi/portfolio-lirikos" title="GitHub" target="_blank" class="git"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/jinju-choi/starbucks" title="GitHub" target="_blank" class="git"><i class="fab fa-github"></i></a>
           </li>
 
           <li class="swiper-slide">

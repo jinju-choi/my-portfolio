@@ -9,7 +9,7 @@ header {
   box-sizing: border-box;
   position: fixed;
   z-index: 5;
-  transition: 0.5s;
+  transition: left 0.5s;
   transform: rotate(2deg) translate(-17px, -5px);
   box-shadow: 4px 4px 8px rgba(0,0,0,.2);
   left: -100%;
@@ -21,6 +21,7 @@ header.active {
 header .logo {
   font-size: 30px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 header .logo a {
   color: #000;

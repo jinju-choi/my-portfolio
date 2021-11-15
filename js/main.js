@@ -4,8 +4,10 @@ window.onscroll = function() {
   headerShow(windowY);
   nav_act(windowY);
   handleScroll();
+  // homeSectionScrolling(windowY);
 }
 
+//about section 진입 헤더 show
 function headerShow(winTop){
   let aboutTop = document.getElementById('about').offsetTop;
 
@@ -29,8 +31,14 @@ function headerShow(winTop){
   }
 }
 
+//header click scrolling
+const logo = document.querySelector('.logo');
+logo.addEventListener('click', () => {
+  window.scrollTo({top:0, behavior: 'smooth'});
+})
 
-//헤더 active
+
+//header show
 const hambuger = document.querySelector('.hambuger');
 const header = document.getElementsByTagName('header')[0];
 let headerOpen = false;
@@ -60,6 +68,7 @@ function headerOutAreaEvent(event) {
 }
 document.addEventListener('click',headerOutAreaEvent);
 
+
 //gnb 클릭 섹션 스크롤링
 const section = document.getElementsByTagName('section');
 const gnbA = document.querySelector('.gnb').getElementsByTagName('a');
@@ -79,6 +88,35 @@ homeDownBtn.addEventListener('click', function(){
   let aboutTop = document.getElementById('about').offsetTop;
   window.scrollTo({top: aboutTop, behavior: 'smooth'});
 });
+
+
+function homeSectionScrolling(winTop) {
+  let about = document.getElementById('about');
+  let aboutTop = document.getElementById('about').offsetTop;
+  let bodyTop = document.documentElement.offsetTop;
+  let homeH = document.getElementById('home').innerHeight();
+  // const aboutTop = window.pageYOffset + about.getBoundingClientRect().top;
+
+  window.addEventListener('wheel', (e) => {
+    if (bodyTop < aboutTop){
+      if(e.wheelDelta < 0){
+        window.scrollTo({top: aboutTop, behavior: 'smooth'});
+        console.log("어바웃 위치로")
+      } 
+    } else if(bodyTop <= aboutTop) {
+      if(e.wheelDelta > 0){
+        window.scrollTo({top: 0, behavior: 'smooth'})
+        console.log("홈위치로");
+      }
+    } else if (bodyTop >= aboutTop) {
+      if (e.wheelDelta <= 0) {
+        console.log("아래로");
+      }
+      
+    }
+    console.log('bodyTop:'+bodyTop + ", about"+ aboutTop);
+  });
+}
 
 
 //섹션 진입시 메뉴 색 변경
@@ -132,7 +170,6 @@ function handleScroll() {
     }
   });
 }
-
 window.addEventListener('scroll', handleScroll);
 
 //remove class 함수
@@ -141,6 +178,19 @@ function reset(content,className){
     element.classList.remove(className);
   });
 }
+
+//skill hover
+const skill_list = document.querySelectorAll('.skill_item');
+const skill_description = document.querySelector('.skill__description').getElementsByTagName('li');
+skill_list.forEach(function(elem, index) {
+  elem.addEventListener('mouseover', function() {
+    skill_description[index].classList.add('hover');
+  });
+  elem.addEventListener('mouseout', function() {
+    skill_description[index].classList.remove('hover');
+  });
+});
+
 
 //thanks message btn
 const thanksMessage = document.querySelector('.thankyou_message');
@@ -156,10 +206,6 @@ if ( window.innerWidth > 1200) {
   const mouseCircle = document.createElement('div');
   mouseCircle.className = 'mouse-circle';
   document.body.appendChild(mouseCircle);
-
-  
-
-
 
   //마우스 커서 위치 담는 변수
   let mouseX = 0;
@@ -200,7 +246,5 @@ if ( window.innerWidth > 1200) {
 
 // 구현할것
 // resize 구현
-// 해더영역 밖 클릭시 닫힘 구현
-// portfolio-more 무한 롤링 0
 // 클릭시 전체 페이지 보여주기
 // 다크모드 버튼 수정

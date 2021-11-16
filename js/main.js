@@ -4,7 +4,7 @@ window.onscroll = function() {
   headerShow(windowY);
   nav_act(windowY);
   handleScroll();
-  // homeSectionScrolling(windowY);
+  homeSectionScrolling(windowY);
 }
 
 //about section 진입 헤더 show
@@ -90,33 +90,55 @@ homeDownBtn.addEventListener('click', function(){
 });
 
 
+//home about wheel 이벤트
+// function homeSectionScrolling(winTop) {
+//   let about = document.getElementById('about');
+//   let aboutTop = document.getElementById('about').offsetTop;
+//   let wheelSection = true;
+//   // const aboutTop = window.pageYOffset + about.getBoundingClientRect().top;
+
+//   window.addEventListener('wheel', (e) => {
+//     if (winTop < aboutTop && winTop == 0){
+//       if(e.wheelDelta < 0){
+//         window.scrollTo({top: aboutTop, behavior: 'smooth'});
+//         console.log("어바웃 위치로")
+//       } 
+//     } else if(winTop <= aboutTop) {
+//       if(e.wheelDelta > 0){
+//         window.scrollTo({top: 0, behavior: 'smooth'})
+//         console.log("홈위치로");
+//       }
+//     } else if (winTop >= aboutTop) {
+//       if (e.wheelDelta <= 0) {
+//         console.log("아래로");
+//       }
+//     }
+//   });
+// }
+
 function homeSectionScrolling(winTop) {
   let about = document.getElementById('about');
   let aboutTop = document.getElementById('about').offsetTop;
-  let bodyTop = document.documentElement.offsetTop;
-  let homeH = document.getElementById('home').innerHeight();
-  // const aboutTop = window.pageYOffset + about.getBoundingClientRect().top;
-
-  window.addEventListener('wheel', (e) => {
-    if (bodyTop < aboutTop){
-      if(e.wheelDelta < 0){
-        window.scrollTo({top: aboutTop, behavior: 'smooth'});
-        console.log("어바웃 위치로")
-      } 
-    } else if(bodyTop <= aboutTop) {
-      if(e.wheelDelta > 0){
-        window.scrollTo({top: 0, behavior: 'smooth'})
-        console.log("홈위치로");
-      }
-    } else if (bodyTop >= aboutTop) {
-      if (e.wheelDelta <= 0) {
-        console.log("아래로");
-      }
-      
+  let homeWheel = (e) => {
+    if(e.wheelDelta < 0){
+      window.scrollTo({top: aboutTop, behavior: 'smooth'});
     }
-    console.log('bodyTop:'+bodyTop + ", about"+ aboutTop);
-  });
+  }
+  let aboutWheel = (e) => {
+    if(e.wheelDelta > 0){
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+  }
+
+  if (winTop < aboutTop) {
+    window.addEventListener('wheel', homeWheel, true);
+  } else if (winTop >= aboutTop) {
+    window.addEventListener('wheel', aboutWheel, function(){
+      window.removeEventListener('wheel', homeWheel, true);
+    });
+  }
 }
+
 
 
 //섹션 진입시 메뉴 색 변경

@@ -1,11 +1,10 @@
 
-window.onscroll = function() {
+window.addEventListener('scroll', function(){
   windowY = Math.floor(window.scrollY || document.documentElement.scrollTop);
   headerShow(windowY);
   nav_act(windowY);
-  handleScroll();
-  homeSectionScrolling(windowY);
-}
+  handleScrollVeiwContents();
+});
 
 //about section 진입 헤더 show
 function headerShow(winTop){
@@ -40,13 +39,9 @@ logo.addEventListener('click', () => {
 
 //header show
 const hambuger = document.querySelector('.hambuger');
+const hambuger_item = hambuger.childNodes;
 const header = document.getElementsByTagName('header')[0];
 let headerOpen = false;
-
-hambuger.addEventListener('click',function() {
-  header.classList.toggle('active');
-  return headerOpen = true;
-});
 
 //헤더 영역 외 클릭시 닫힘
 function headerOutAreaEvent(event) {
@@ -54,14 +49,14 @@ function headerOutAreaEvent(event) {
 
   if(window.innerWidth < 1200 ){
     if(target !== event.currentTarget.querySelector('.hambuger')) {
-      header.style.left= '-220px';
+      header.classList.remove('active');
       console.log('헤더영역이 아냐');
     } 
     if(target == event.currentTarget.querySelector('header')) {
-      header.style.left= 0;
+      header.classList.add('active');
     }
     else if(target == event.currentTarget.querySelector('.hambuger')) {
-      header.style.left= 0;
+      header.classList.add('active');
       console.log('헤더영역이야');
     }
   }
@@ -88,56 +83,6 @@ homeDownBtn.addEventListener('click', function(){
   let aboutTop = document.getElementById('about').offsetTop;
   window.scrollTo({top: aboutTop, behavior: 'smooth'});
 });
-
-
-//home about wheel 이벤트
-// function homeSectionScrolling(winTop) {
-//   let about = document.getElementById('about');
-//   let aboutTop = document.getElementById('about').offsetTop;
-//   let wheelSection = true;
-//   // const aboutTop = window.pageYOffset + about.getBoundingClientRect().top;
-
-//   window.addEventListener('wheel', (e) => {
-//     if (winTop < aboutTop && winTop == 0){
-//       if(e.wheelDelta < 0){
-//         window.scrollTo({top: aboutTop, behavior: 'smooth'});
-//         console.log("어바웃 위치로")
-//       } 
-//     } else if(winTop <= aboutTop) {
-//       if(e.wheelDelta > 0){
-//         window.scrollTo({top: 0, behavior: 'smooth'})
-//         console.log("홈위치로");
-//       }
-//     } else if (winTop >= aboutTop) {
-//       if (e.wheelDelta <= 0) {
-//         console.log("아래로");
-//       }
-//     }
-//   });
-// }
-
-function homeSectionScrolling(winTop) {
-  let about = document.getElementById('about');
-  let aboutTop = document.getElementById('about').offsetTop;
-  let homeWheel = (e) => {
-    if(e.wheelDelta < 0){
-      window.scrollTo({top: aboutTop, behavior: 'smooth'});
-    }
-  }
-  let aboutWheel = (e) => {
-    if(e.wheelDelta > 0){
-      window.scrollTo({top: 0, behavior: 'smooth'});
-    }
-  }
-
-  if (winTop < aboutTop) {
-    window.addEventListener('wheel', homeWheel, true);
-  } else if (winTop >= aboutTop) {
-    window.addEventListener('wheel', aboutWheel, function(){
-      window.removeEventListener('wheel', homeWheel, true);
-    });
-  }
-}
 
 
 
@@ -175,7 +120,7 @@ function isElementUnderBottom(elem, triggerDiff) {
   return top > innerHeight + (triggerDiff || 0);
 }
 
-function handleScroll() {
+function handleScrollVeiwContents() {
   const elems = document.querySelectorAll('.up-on-scroll');
   let ch_point;
   if(window.innerWidth > 768) {
@@ -192,7 +137,6 @@ function handleScroll() {
     }
   });
 }
-window.addEventListener('scroll', handleScroll);
 
 //remove class 함수
 function reset(content,className){
@@ -217,11 +161,13 @@ skill_list.forEach(function(elem, index) {
 //thanks message btn
 const thanksMessage = document.querySelector('.thankyou_message');
 const thanksCloseBtn = thanksMessage.querySelector('.close--btn');
+
 function thanksBtnClose() {
   thanksMessage.style.display = 'none';
 }
 
 thanksCloseBtn.addEventListener('click', thanksBtnClose);
+
 
 //마우스 따라다니는 효과
 if ( window.innerWidth > 1200) {

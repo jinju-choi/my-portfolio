@@ -149,26 +149,33 @@ header .hambuger {
   top: 20px;
   right: 0;
   width: 55px;
-  height: 35px;
+  height: 40px;
+  padding: 0 13px;
+  box-sizing: border-box;
   background-color: var(--yellow-main);
   transform: translateX(100%);
   box-shadow: 4px 4px 8px rgba(0,0,0,.2);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   cursor: pointer;
 }
 header .hambuger__item {
   width: 25px;
-  height: 2px;
+  height: 4px;
+  border-radius: 3px;
   background: #fff;
-  display: block;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   display: none;
+  transition: 0.2s;
 }
-header .hambuger:hover .hambuger__item {
-  margin-bottom: 8px;
+header .hambuger__item:nth-child(2) {
+  width: 17px;
+}
+header .hambuger:hover .hambuger__item:not(:nth-child(3)) {
+  /* width: 28px; */
+  margin-bottom: 7px;
 }
 header .hambuger__item:nth-child(3) {
   margin-bottom: 0;

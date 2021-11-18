@@ -454,15 +454,10 @@ body.dark-mode {
   color: #333;
 }
 #about .skill .skill__list li:nth-child(6) {
-  background-color: #61DAFB;
-  transform: rotate(3deg) translateY(15px);
-  color: #333;
-}
-#about .skill .skill__list li:nth-child(7) {
   background-color: #31A8FF;
   transform: rotate(-6deg) translateX(5px);
 }
-#about .skill .skill__list li:nth-child(8) {
+#about .skill .skill__list li:nth-child(7) {
   background-color: #FF9A00;
 }
 #about .skill .skill__list li:hover {

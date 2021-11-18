@@ -523,6 +523,10 @@ body.dark-mode {
   overflow-y: hidden;
   box-shadow: 5px 5px 10px rgba(0,0,0,.2);
 }
+.swiper-button-next,
+.swiper-button-prev {
+  width: 4.4rem;
+}
 #portfolio .portfolio-content .portfolio-images .portfolio-ratio {
   height: 0;
   padding-top: 56.25%;
@@ -603,6 +607,10 @@ body.dark-mode {
 #portfolio .swiper-button-next, 
 #portfolio .swiper-button-prev {
   color: var(--yellow-main);
+}
+#portfolio .swiper-button-next::after, 
+#portfolio .swiper-button-prev::after {
+  font-size: 4.4rem;
 }
 #portfolio .swiper-pagination-bullet-active {
   background-color: var(--yellow-main);

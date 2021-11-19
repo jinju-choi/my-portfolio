@@ -169,6 +169,7 @@ header .hambuger__item {
   margin-bottom: 5px;
   display: none;
   transition: 0.2s;
+  pointer-events: none;
 }
 header .hambuger__item:nth-child(2) {
   width: 17px;

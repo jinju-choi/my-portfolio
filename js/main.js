@@ -6,6 +6,7 @@ window.addEventListener('scroll', function(){
   handleScrollVeiwContents();
 });
 
+headerShow;
 
 //about section 진입 헤더 show
 function headerShow(winTop){

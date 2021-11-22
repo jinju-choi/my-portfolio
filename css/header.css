@@ -12,7 +12,7 @@ header {
   transition: left 0.5s;
   transform: rotate(2deg) translate(-17px, -5px);
   box-shadow: 4px 4px 8px rgba(0,0,0,.2);
-  left: -100%;
+  left: -220px;
   opacity: 0;
 }
 header.active {

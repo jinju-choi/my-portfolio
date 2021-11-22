@@ -36,9 +36,21 @@ html {
 #about .intro-second .box--todo {
   transform: translate(0) rotate(-3deg);
 }
-#about .skill ul li {
+#about .skill .skill__list li {
+  height: 50px;
+}
+#about .skill .skill__list li:hover {
+  margin-top: 0;
+  box-shadow: 3px 11px 7px rgb(0 0 0 / 27%);
+  z-index: 1;
+}
+#about .skill .skill_item {
   width: 220px;
   height: 48px;
+}
+#about .skill .skill__description {
+  bottom: unset;
+  top: 18%;
 }
 #portfolio .portfolio-content {
   padding: 80px 0 100px;

@@ -1,21 +1,24 @@
 html {
   font-size: 9px;
 }
-header {
-  left: -220px;
-}
-header .hambuger__item {
-  display: block;
-}
 section {
   padding-left: 0;
+}
+.container {
+  padding: 0 100px;
+}
+/* header {
+  left: -220px;
+} */
+header .hambuger__item {
+  display: block;
 }
 #home .smile {
   width: 35vw;
   height: 35vw;
 }
-.container {
-  padding: 0 100px;
+#about .skill .skill__description {
+  bottom: -15%;
 }
 .portfolio-more {
   padding-left: 0;

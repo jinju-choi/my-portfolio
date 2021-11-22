@@ -34,6 +34,9 @@ body.dark-mode {
 .dark-mode #about .intro h3 strong {
   color: #000;
 }
+.dark-mode #about .skill .skill__description li {
+  color: #ccc;
+}
 .dark-mode section .a-after h4 {
   color: #ccc !important;
 }
@@ -465,7 +468,7 @@ body.dark-mode {
   box-shadow: 3px 11px 7px rgb(0 0 0 / 27%);
   z-index: 1;
 }
-#about .skill ul li i {
+#about .skill .skill__list i {
   margin-right: 15px;
 }
 #about .skill .skill__description {

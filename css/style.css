@@ -67,7 +67,7 @@ body.dark-mode {
   animation-delay: 0.5s;
   animation-iteration-count: infinite;
 }
-@keyframes smile-roll{
+@keyframes smile-roll {
   100%{
     transform: rotate(-360deg);
   }
@@ -290,7 +290,7 @@ body.dark-mode {
   animation-fill-mode: both;
   text-shadow: 0 0 4px rgb(255, 255, 255, .9);
 }
-@keyframes down--button{
+@keyframes down--button {
   0% {
     margin-bottom: 0px;
   }
@@ -396,7 +396,7 @@ body.dark-mode {
   font-style: italic;
   font-family: var(--font-cally);
 }
-#about .intro-second .box__list li{
+#about .intro-second .box__list li {
   margin-bottom: 10px;
   line-height: 1.5;
   font-family: var(--font-cally);
@@ -698,7 +698,7 @@ body.dark-mode {
   color: #fff;
   font-size: 30px;
 } */
-.portfolio-more ul li a.go-link::after{
+.portfolio-more ul li a.go-link::after {
   content: "";
   width: 100%;
   height: 100%;

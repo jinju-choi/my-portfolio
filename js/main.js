@@ -1,5 +1,5 @@
 
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', function() {
   windowY = Math.floor(window.scrollY || document.documentElement.scrollTop);
   headerShow(windowY);
   nav_act(windowY);
@@ -9,10 +9,10 @@ window.addEventListener('scroll', function(){
 headerShow;
 
 //about section 진입 헤더 show
-function headerShow(winTop){
+function headerShow(winTop) {
   let aboutTop = document.getElementById('about').offsetTop;
 
-  if(window.innerWidth > 1200){
+  if(window.innerWidth > 1200) {
     if(winTop >= aboutTop){
       header.style.left= '0';
       header.style.opacity= 1;
@@ -22,7 +22,7 @@ function headerShow(winTop){
     }
   } 
 
-  if(window.innerWidth < 1200){
+  if(window.innerWidth < 1200) {
     if(winTop >= aboutTop){
       header.style.opacity= 1;
     } else {
@@ -94,11 +94,11 @@ function nav_act(winy) {
   let gnbA = document.querySelector('.gnb').getElementsByTagName('a');
 
   let ac_point = new Array;
-  Array.from(section).forEach(function(element,index){
+  Array.from(section).forEach(function(element,index) {
     ac_point[index]= Math.floor(element.offsetTop);
   });
 
-  Array.from(ac_point).forEach(function(element,index){
+  Array.from(ac_point).forEach(function(element,index) {
     if(element <= winy){
       reset(gnbA ,"active");
       gnbA[index].classList.add("active");
@@ -141,7 +141,7 @@ function handleScrollVeiwContents() {
 }
 
 //remove class 함수
-function reset(content,className){
+function reset(content,className) {
   Array.from(content).forEach(element => {
     element.classList.remove(className);
   });
@@ -210,11 +210,3 @@ if ( window.innerWidth > 1200) {
 
 
 // setInterval("moveImg()", 50); // moveImg 함수 반복 실행하여 이미지 움직이기
-
-
-
-
-// 구현할것
-// resize 구현
-// 클릭시 전체 페이지 보여주기
-// 다크모드 버튼 수정

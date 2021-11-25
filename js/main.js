@@ -98,7 +98,7 @@ function nav_act(winy) {
     ac_point[index]= Math.floor(element.offsetTop);
   });
 
-  Array.from(ac_point).forEach(function(element,index) {
+  ac_point.forEach(function(element,index) {
     if(element <= winy){
       reset(gnbA ,"active");
       gnbA[index].classList.add("active");
@@ -120,6 +120,7 @@ function isElementUnderBottom(elem, triggerDiff) {
   const { top } = elem.getBoundingClientRect();
   const { innerHeight } = window;
   return top > innerHeight + (triggerDiff || 0);
+  
 }
 
 function handleScrollVeiwContents() {

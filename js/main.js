@@ -6,7 +6,12 @@ window.addEventListener('scroll', function() {
   handleScrollVeiwContents();
 });
 
-headerShow;
+//resize시 재로딩
+window.addEventListener('resize', function(){
+  if (window.innerWidth < 1200) {
+    window.location.reload();
+  }
+});
 
 //about section 진입 헤더 show
 function headerShow(winTop) {

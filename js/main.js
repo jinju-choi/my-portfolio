@@ -1,6 +1,13 @@
+//reload
+window.addEventListener('reload', function(){
+  let scrollOffset = Math.floor(window.scrollY || document.documentElement.scrollTop);
+  headerShow(scrollOffset);
+  nav_act(scrollOffset);
+});
 
+//scroll
 window.addEventListener('scroll', function() {
-  windowY = Math.floor(window.scrollY || document.documentElement.scrollTop);
+  let windowY = Math.floor(window.scrollY || document.documentElement.scrollTop);
   headerShow(windowY);
   nav_act(windowY);
   handleScrollVeiwContents();
@@ -197,6 +204,7 @@ if ( window.innerWidth > 1200) {
   }
   document.onmousemove = getMousePosition;
 }
+
 // function moveImg(){
 //   // 이미지 위치 파악하기
 //   let m_x = parseInt(document.querySelector('.mouse-circle').style.left.replace('px', ''));
@@ -213,6 +221,5 @@ if ( window.innerWidth > 1200) {
 //   // ※ 이미지 위치 기준 마우스 커서 위치란?
 //   // 이미지를 기준으로 그 이미지에서 커서가 얼마나 떨어져 있는지 여부
 // }
-
 
 // setInterval("moveImg()", 50); // moveImg 함수 반복 실행하여 이미지 움직이기

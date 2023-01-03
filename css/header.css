@@ -41,7 +41,7 @@ header .gnb ul li {
   margin: 10px 0;
 }
 header .gnb ul li a {
-  color: #000;
+  color: var(--textColor);
   font-size: 20px;
   display: block;
   line-height: 1.5;
@@ -60,7 +60,7 @@ header .gnb ul li a.active::after {
   width: 80%;
   height: 22px;
   background: var(--yellow-neon);
-  opacity: 0.5;
+  opacity: var(--bgOpacity);
   z-index: -1;
 }
 header .gnb ul li a:hover {

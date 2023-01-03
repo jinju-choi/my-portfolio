@@ -94,7 +94,7 @@ Array.from(gnbA).forEach(function(element, index) {
 //home 다운버튼 클릭시 스크롤이동
 const homeDownBtn = document.querySelector('.down--button');
 homeDownBtn.addEventListener('click', function(){
-  let aboutTop = document.getElementById('about').offsetTop;
+  let aboutTop = document.querySelector('.about').offsetTop;
   window.scrollTo({top: aboutTop, behavior: 'smooth'});
 });
 

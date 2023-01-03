@@ -8,9 +8,9 @@
 }
 
 :root[color-theme='dark'] {
-  --homeBg: #444444;
-  --bgColor: #444444;
-  --bgColor2: #333333;
+  --homeBg: #333333;
+  --bgColor: #333333;
+  --bgColor2: #222222;
   --title: #ffcc33;
   --textColor: #eeeeee;
   --bgOpacity: 0.3;

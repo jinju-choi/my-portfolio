@@ -5,12 +5,12 @@
 
 .smile-small {
   position: absolute;
-  width: 23px;
-  background-color: var(--yellow-main);
-  z-index: 1;
-  border-radius: 50%;
   left: 66px;
   top: 21px;
+  z-index: 1;
+  width: 23px;
+  background-color: var(--yellow-main);
+  border-radius: 50%;
   border: 2px solid #000;
   animation-name: smile-roll;
   animation-duration: 2s;
@@ -50,7 +50,9 @@
 
 .home .title {}
 
-.home .title h2 {}
+.home .title h2 {
+  color: var(--title);
+}
 
 .home .title h2 span {
   font-size: 9.0rem;
@@ -341,6 +343,7 @@
   font-size: 4.0rem;
   font-weight: 600;
   margin-left: 1px;
+  color: var(--title);
 }
 
 .about .intro-first .intro__main strong {
@@ -349,6 +352,7 @@
 
 .about .intro-first .intro__main .text--point {
   background-color: var(--yellow-main);
+  color: #000;
 }
 
 .about .intro-first .intro__main .text--dot span {

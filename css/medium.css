@@ -13,16 +13,16 @@ section {
 header .hambuger__item {
   display: block;
 }
-#home .smile {
+.home .smile {
   width: 35vw;
   height: 35vw;
 }
-#about .skill .skill__description {
+.about .skill .skill__description {
   bottom: -15%;
 }
 .portfolio-more {
   padding-left: 0;
 }
-#contact {
+.contact {
   height: auto;
 }

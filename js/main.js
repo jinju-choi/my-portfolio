@@ -22,7 +22,7 @@ window.addEventListener('resize', function(){
 
 //about section 진입 헤더 show
 function headerShow(winTop) {
-  let aboutTop = document.getElementById('about').offsetTop;
+  let aboutTop = document.querySelector('.about').offsetTop;
 
   if(window.innerWidth > 1200) {
     if(winTop >= aboutTop){
@@ -120,12 +120,34 @@ function nav_act(winy) {
 
 
 //다크모드
-const body = document.getElementsByTagName('body')[0];
-const darkModeBtn = document.querySelector('.d-mode--btn');
+const darkModeBtn = document.querySelector('.dark-button input');
+const userColorTheme = localStorage.getItem('color-theme');
+const osColorTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-darkModeBtn.addEventListener('click',function() {
-  body.classList.toggle('dark-mode');
+// const getUserTheme = () => (userColorTheme ? userColorTheme : osColorTheme);
+
+window.onload = function(){
+  if(userColorTheme === 'dark') {
+    localStorage.setItem('color-theme', 'dark');
+    document.documentElement.setAttribute('color-theme','dark');
+    darkModeBtn.setAttribute('checked', true);
+  } else {
+    localStorage.setItem('color-theme', 'light');
+    document.documentElement.setAttribute('color-theme','light');
+  }
+}
+
+darkModeBtn.addEventListener('click',function(e) {
+  if(e.target.checked) {
+    localStorage.setItem('color-theme', 'dark');
+    document.documentElement.setAttribute('color-theme', 'dark');
+  } else {
+    localStorage.setItem('color-theme', 'light');
+    document.documentElement.setAttribute('color-theme', 'light');
+  }
+
 });
+
 
 //스크롤시 나타남
 function isElementUnderBottom(elem, triggerDiff) {

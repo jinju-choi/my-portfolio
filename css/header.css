@@ -4,7 +4,7 @@
 header {
   width: 223px;
   height: 101%;
-  background: #fff;
+  background: var(--bgColor2);
   padding: 20px;
   box-sizing: border-box;
   position: fixed;
@@ -22,6 +22,7 @@ header .logo {
   font-size: 30px;
   text-transform: uppercase;
   cursor: pointer;
+  color: var(--title);
 }
 header .logo a {
   color: #000;
@@ -128,19 +129,19 @@ header .gnb ul li a:hover {
   background-position: center;
   top: calc(50% - 14px);
 }
-input:checked + .d-mode--btn {
+.dark-button input:checked + .d-mode--btn {
   background: #e6b72c;
 }
-input:checked + .d-mode--btn::before {
+.dark-button input:checked + .d-mode--btn::before {
   background-image: url("../img/light_mode.png");
   left: 9px;
   opacity: 0.7;
 }
-input:checked + .d-mode--btn .d-mode--switch  {
+.dark-button input:checked + .d-mode--btn .d-mode--switch  {
   left: calc(100% - 40px);
   background-color: #666;
 }
-input:checked + .d-mode--btn .d-mode--switch::before {
+.dark-button input:checked + .d-mode--btn .d-mode--switch::before {
   background-image: url("../img/moon.png"); 
 }
 

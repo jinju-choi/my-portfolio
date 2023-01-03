@@ -3,70 +3,6 @@
 @import url('./root.css');
 
 
-/* =============== darkmode ==================== */
-body.dark-mode {
-  background-color: #444;
-}
-
-.dark-mode .h3-font::after {
-  opacity: 0.3;
-}
-
-.dark-mode header {
-  background-color: #333;
-}
-
-.dark-mode header h1 {
-  color: var(--yellow-main);
-}
-
-.dark-mode header .smile-small {
-  border: none;
-  left: 67px;
-  top: 24px;
-  width: 24px;
-}
-
-.dark-mode header .menu--click {
-  color: var(--yellow-main) !important;
-}
-
-.dark-mode header .gnb ul li a {
-  color: #fff;
-}
-
-.dark-mode #home {
-  background-color: #444;
-}
-
-.dark-mode #about .intro h3 strong {
-  color: #000;
-}
-
-.dark-mode #about .skill .skill__description li {
-  color: #ccc;
-}
-
-.dark-mode section .a-after h4 {
-  color: #ccc !important;
-}
-
-.dark-mode section h3 {
-  color: var(--yellow-main) !important;
-}
-
-.dark-mode .portfolio-more h3 {
-  color: var(--yellow-main) !important;
-}
-
-.dark-mode .portfolio-more h3+p {
-  color: #fff !important;
-}
-
-.dark-mode #contact .inner div p {
-  color: #fff !important;
-}
-
 .smile-small {
   position: absolute;
   width: 23px;
@@ -94,8 +30,8 @@ body.dark-mode {
 }
 
 /* =============== home ==================== */
-#home {
-  background: var(--yellow-main);
+.home {
+  background: var(--homeBg);
   position: relative;
   top: 0;
   left: 0;
@@ -105,72 +41,72 @@ body.dark-mode {
   padding-left: 0;
 }
 
-#home .inner {
+.home .inner {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#home .title {}
+.home .title {}
 
-#home .title h2 {}
+.home .title h2 {}
 
-#home .title h2 span {
+.home .title h2 span {
   font-size: 9.0rem;
 }
 
-#home .title h2 span {
+.home .title h2 span {
   position: relative;
 }
 
-#home .title .title__item {
+.home .title .title__item {
   animation: title-ani 1.5s cubic-bezier(.23, 1, .32, 1) 1 forwards;
   top: -50px;
   opacity: 0;
 }
 
-#home .title .title__item:nth-child(1) {
+.home .title .title__item:nth-child(1) {
   animation-delay: 3.0s;
 }
 
-#home .title .title__item:nth-child(2) {
+.home .title .title__item:nth-child(2) {
   animation-delay: 3.1s;
 }
 
-#home .title .title__item:nth-child(3) {
+.home .title .title__item:nth-child(3) {
   animation-delay: 3.2s;
 }
 
-#home .title .title__item:nth-child(4) {
+.home .title .title__item:nth-child(4) {
   animation-delay: 3.3s;
 }
 
-#home .title .title__item:nth-child(5) {
+.home .title .title__item:nth-child(5) {
   animation-delay: 3.4s;
 }
 
-#home .title .title__item:nth-child(6) {
+.home .title .title__item:nth-child(6) {
   animation-delay: 3.5s;
 }
 
-#home .title .title__item:nth-child(7) {
+.home .title .title__item:nth-child(7) {
   animation-delay: 3.6s;
 }
 
-#home .title .title__item:nth-child(8) {
+.home .title .title__item:nth-child(8) {
   animation-delay: 3.7s;
 }
 
-#home .title .title__item:nth-child(9) {
+.home .title .title__item:nth-child(9) {
   animation-delay: 3.8s;
 }
 
-#home .title .title__item:nth-child(9) {
+.home .title .title__item:nth-child(9) {
   animation-delay: 3.9s;
 }
 
-#home .title h2 span.infinite {}
+.home .title h2 span.infinite {}
 
 @keyframes title-ani {
   0% {
@@ -226,7 +162,7 @@ body.dark-mode {
   }
 }
 
-#home .title__img {
+.home .title__img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -235,7 +171,7 @@ body.dark-mode {
   overflow: hidden;
 }
 
-#home .smile {
+.home .smile {
   position: absolute;
   right: 50%;
   bottom: 50%;
@@ -265,11 +201,11 @@ body.dark-mode {
   }
 }
 
-#home .smile::before {
+.home .smile::before {
   content: "";
   width: 12%;
   height: 0;
-  background: var(--yellow-main);
+  background: var(--homeBg);
   display: block;
   position: absolute;
   top: 37%;
@@ -291,7 +227,7 @@ body.dark-mode {
   }
 }
 
-#home .smile::after {
+.home .smile::after {
   content: "";
   width: 140%;
   height: 140%;
@@ -320,11 +256,11 @@ body.dark-mode {
   }
 }
 
-#home .smile img {
+.home .smile img {
   width: 100%;
 }
 
-#home button {
+.home button {
   position: absolute;
   bottom: 30px;
   left: 50%;
@@ -335,7 +271,7 @@ body.dark-mode {
   padding: 0 10px;
 }
 
-#home button span {
+.home button span {
   transform: scale(2);
   color: rgba(255, 255, 255, .5);
   animation-name: down--button;
@@ -369,27 +305,27 @@ body.dark-mode {
 }
 
 /* =============== about ==================== */
-#about {
+.about {
   height: auto;
 }
 
-#about .container {
+.about .container {
   height: 100vh;
   overflow: hidden;
 }
 
-#about .inner {
+.about .inner {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-#about .intro-first {
+.about .intro-first {
   text-align: center;
   position: relative;
 }
 
-#about .intro-first .intro__sub {
+.about .intro-first .intro__sub {
   font-size: 2.6rem;
   line-height: 1.7;
   font-family: var(--font-cally);
@@ -400,26 +336,26 @@ body.dark-mode {
   transform: rotate(-22deg);
 }
 
-#about .intro-first .intro__main {
+.about .intro-first .intro__main {
   line-height: 2.3;
   font-size: 4.0rem;
   font-weight: 600;
   margin-left: 1px;
 }
 
-#about .intro-first .intro__main strong {
+.about .intro-first .intro__main strong {
   font-size: 4.0rem;
 }
 
-#about .intro-first .intro__main .text--point {
+.about .intro-first .intro__main .text--point {
   background-color: var(--yellow-main);
 }
 
-#about .intro-first .intro__main .text--dot span {
+.about .intro-first .intro__main .text--dot span {
   position: relative;
 }
 
-#about .intro-first .intro__main .text--dot span::before {
+.about .intro-first .intro__main .text--dot span::before {
   content: "";
   width: 1.0rem;
   height: 1.0rem;
@@ -432,15 +368,15 @@ body.dark-mode {
   transform: translateX(-50%);
 }
 
-#about .intro-second .wrap {
+.about .intro-second .wrap {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#about .intro-second .box {
+.about .intro-second .box {
   width: 320px;
-  height: 300px;
+  min-height: 300px;
   padding: 30px 40px;
   box-sizing: border-box;
   background-color: var(--yellow-light);
@@ -448,24 +384,24 @@ body.dark-mode {
   position: relative;
 }
 
-#about .intro-second ul {
+.about .intro-second ul {
   list-style: initial;
 }
 
-#about .intro-second .box--favorite {
+.about .intro-second .box--favorite {
   transform: rotate(5deg);
 }
 
-#about .intro-second .box--todo {
+.about .intro-second .box--todo {
   transform: translate(-6px, 35px);
   box-shadow: -2px 4px 5px rgb(0 0 0 / 10%);
 }
 
-#about .intro-second .box--favorite ul {
+.about .intro-second .box--favorite ul {
   list-style: none;
 }
 
-#about .intro-second .subject {
+.about .intro-second .subject {
   margin-bottom: 30px;
   font-size: 3.4rem;
   font-weight: 600;
@@ -473,7 +409,7 @@ body.dark-mode {
   font-family: var(--font-cally);
 }
 
-#about .intro-second .box__list li {
+.about .intro-second .box__list li {
   margin-bottom: 10px;
   line-height: 1.5;
   font-family: var(--font-cally);
@@ -482,32 +418,32 @@ body.dark-mode {
   text-align: center;
 }
 
-#about .intro-second .box__list strong {
+.about .intro-second .box__list strong {
   font-family: var(--font-cally);
   font-weight: bold;
 }
 
-#about .skill {
+.about .skill {
   box-sizing: border-box;
 }
 
-#about .skill .wrap {
+.about .skill .wrap {
   position: relative;
   text-align: center;
 }
 
-#about .skill h3 {
+.about .skill h3 {
   margin-bottom: 150px;
 }
 
-#about .skill .skill__list {
+.about .skill .skill__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px 0;
 }
 
-#about .skill .skill__list li {
+.about .skill .skill__list li {
   width: 245px;
   height: 60px;
   padding: 0 30px;
@@ -521,65 +457,65 @@ body.dark-mode {
   font-weight: 500;
 }
 
-#about .skill .skill__list li:nth-child(1) {
+.about .skill .skill__list li:nth-child(1) {
   background-color: #E34F26;
   transform: rotate(-5deg) translateY(-10px);
 }
 
-#about .skill .skill__list li:nth-child(2) {
+.about .skill .skill__list li:nth-child(2) {
   background-color: #1572B6;
 }
 
-#about .skill .skill__list li:nth-child(3) {
+.about .skill .skill__list li:nth-child(3) {
   background-color: #CC6699;
   transform: rotate(-9deg) translateX(13px);
 }
 
-#about .skill .skill__list li:nth-child(4) {
+.about .skill .skill__list li:nth-child(4) {
   background-color: #0769AD;
   transform: rotate(3deg);
 }
 
-#about .skill .skill__list li:nth-child(5) {
+.about .skill .skill__list li:nth-child(5) {
   background-color: #F7DF1E;
   color: #333;
 }
 
-#about .skill .skill__list li:nth-child(6) {
+.about .skill .skill__list li:nth-child(6) {
   background-color: #20232a;
   color: #61dafb;
   transform: rotate(3deg) translateX(2px);
 }
 
-#about .skill .skill__list li:nth-child(7) {
+.about .skill .skill__list li:nth-child(7) {
   background-color: #31A8FF;
   transform: rotate(-6deg) translateX(5px);
 }
 
-#about .skill .skill__list li:nth-child(8) {
+.about .skill .skill__list li:nth-child(8) {
   background-color: #FF9A00;
 }
 
-#about .skill .skill__list li:nth-child(9) {
+.about .skill .skill__list li:nth-child(9) {
   background-color: #333333;
 }
 
-#about .skill .skill__list li:nth-child(10) {
+.about .skill .skill__list li:nth-child(10) {
   background-color: #4e0039;
   transform: translateY(15px);
 }
 
-#about .skill .skill__list li:hover {
+.about .skill .skill__list li:hover {
   margin-top: -10px;
   box-shadow: 3px 11px 7px rgb(0 0 0 / 27%);
   z-index: 1;
 }
 
-#about .skill .skill__list i {
+.about .skill .skill__list i {
   margin-right: 15px;
 }
 
-#about .skill .skill__description {
+.about .skill .skill__description {
   position: absolute;
   bottom: -28%;
   left: 50%;
@@ -587,7 +523,7 @@ body.dark-mode {
   color: #333;
 }
 
-#about .skill .skill__description li {
+.about .skill .skill__description li {
   position: absolute;
   top: 0;
   left: 0;
@@ -596,36 +532,36 @@ body.dark-mode {
   font-size: 2.0rem;
   word-break: keep-all;
   line-height: 1.5;
-  color: #333;
+  color: var(--textColor);
   opacity: 0;
   transition: margin-top 0.5s, opacity 0.3s;
 }
 
-#about .skill .skill__description li.hover {
+.about .skill .skill__description li.hover {
   margin-top: 0;
   opacity: 1;
 }
 
 /* =============== PORTFOLIO ==================== */
-#portfolio {
+.portfolio {
   height: auto;
 }
 
-#portfolio .inner {}
+.portfolio .inner {}
 
-#portfolio .inner::after {
+.portfolio .inner::after {
   content: "";
   display: block;
   clear: both;
 }
 
-#portfolio h3 {
+.portfolio h3 {
   position: sticky;
   top: 0;
   margin-top: 70px;
 }
 
-#portfolio .portfolio-content {
+.portfolio .portfolio-content {
   width: 100%;
   padding: 200px 0 150px;
   display: flex;
@@ -635,7 +571,7 @@ body.dark-mode {
   top: 0;
 }
 
-#portfolio .portfolio-content .portfolio-images {
+.portfolio .portfolio-content .portfolio-images {
   width: 78%;
   overflow-y: hidden;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
@@ -646,17 +582,17 @@ body.dark-mode {
   width: 4.4rem;
 }
 
-#portfolio .portfolio-content .portfolio-images .portfolio-ratio {
+.portfolio .portfolio-content .portfolio-images .portfolio-ratio {
   height: 0;
   padding-top: 56.25%;
   position: relative;
 }
 
-#portfolio .portfolio-content .portfolio-images:hover::before {
+.portfolio .portfolio-content .portfolio-images:hover::before {
   opacity: 0;
 }
 
-#portfolio .portfolio-content .portfolio-images ul {
+.portfolio .portfolio-content .portfolio-images ul {
   width: 300%;
   position: absolute;
   top: 0;
@@ -664,15 +600,15 @@ body.dark-mode {
   display: flex;
 }
 
-#portfolio .portfolio-content .portfolio-images ul li {
+.portfolio .portfolio-content .portfolio-images ul li {
   width: calc(100% / 3);
 }
 
-#portfolio .portfolio-content .portfolio-images ul li img {
+.portfolio .portfolio-content .portfolio-images ul li img {
   width: 100%;
 }
 
-#portfolio .portfolio-content .portfolio-text {
+.portfolio .portfolio-content .portfolio-text {
   vertical-align: bottom;
   padding: 30px;
   background-color: #d7f6ff;
@@ -682,47 +618,47 @@ body.dark-mode {
   text-align: left;
 }
 
-#portfolio .portfolio-content:nth-of-type(2) .portfolio-text {
+.portfolio .portfolio-content:nth-of-type(2) .portfolio-text {
   text-align: right;
 }
 
-#portfolio .portfolio-content .portfolio-text h4 {
+.portfolio .portfolio-content .portfolio-text h4 {
   font-size: 3.0rem;
   font-weight: 800;
   margin-bottom: 10px;
 }
 
-#portfolio .portfolio-content .portfolio-text .date {
+.portfolio .portfolio-content .portfolio-text .date {
   font-size: 1.8rem;
   color: #777;
 }
 
-#portfolio .portfolio-content .portfolio-text p {
+.portfolio .portfolio-content .portfolio-text p {
   line-height: 1.3;
   font-size: 1.6rem;
 }
 
-#portfolio .portfolio-content .portfolio-text p strong {
+.portfolio .portfolio-content .portfolio-text p strong {
   font-weight: 600;
   font-size: 2.0rem;
   margin-right: 10px;
 }
 
-#portfolio .portfolio-content .portfolio-text p:last-of-type {
+.portfolio .portfolio-content .portfolio-text p:last-of-type {
   margin-bottom: 30px;
 }
 
-#portfolio .portfolio-content .portfolio-text .portfolio-skill {}
+.portfolio .portfolio-content .portfolio-text .portfolio-skill {}
 
-#portfolio .portfolio-content .portfolio-text .portfolio-link {
+.portfolio .portfolio-content .portfolio-text .portfolio-link {
   display: flex;
 }
 
-#portfolio .portfolio-content:nth-of-type(2) .portfolio-text .portfolio-link {
+.portfolio .portfolio-content:nth-of-type(2) .portfolio-text .portfolio-link {
   justify-content: flex-end;
 }
 
-#portfolio .portfolio-content .portfolio-text .portfolio-link a {
+.portfolio .portfolio-content .portfolio-text .portfolio-link a {
   display: block;
   padding: 10px 30px;
   background: #428cff;
@@ -734,21 +670,21 @@ body.dark-mode {
   color: #fff;
 }
 
-#portfolio .portfolio-content .portfolio-text .portfolio-link a:last-child {
+.portfolio .portfolio-content .portfolio-text .portfolio-link a:last-child {
   margin-right: 0;
 }
 
-#portfolio .swiper-button-next,
-#portfolio .swiper-button-prev {
+.portfolio .swiper-button-next,
+.portfolio .swiper-button-prev {
   color: var(--yellow-main);
 }
 
-#portfolio .swiper-button-next::after,
-#portfolio .swiper-button-prev::after {
+.portfolio .swiper-button-next::after,
+.portfolio .swiper-button-prev::after {
   font-size: 4.4rem;
 }
 
-#portfolio .swiper-pagination-bullet-active {
+.portfolio .swiper-pagination-bullet-active {
   background-color: var(--yellow-main);
 }
 
@@ -767,7 +703,6 @@ body.dark-mode {
 
 .portfolio-more h3 {
   display: inline-block;
-  color: #000;
   /* -webkit-text-stroke-width: 3px;
 	-webkit-text-stroke-color: var(--yellow-main); */
   margin-bottom: 100px;
@@ -895,29 +830,29 @@ body.dark-mode {
 }
 
 /* =============== contact ==================== */
-#contact {
+.contact {
   margin-left: 0;
   position: relative;
 }
 
-#contact .inner {}
+.contact .inner {}
 
-#contact .inner .wrap {
+.contact .inner .wrap {
   display: flex;
   justify-content: center;
   gap: 50px;
   text-align: left;
 }
 
-#contact .inner>div {
+.contact .inner>div {
   position: relative;
 }
 
-#contact .inner h3 {
+.contact .inner h3 {
   margin-bottom: 100px;
 }
 
-#contact .inner div h3::before {
+.contact .inner div h3::before {
   content: "";
   display: inline-block;
   width: 10px;
@@ -926,15 +861,16 @@ body.dark-mode {
   border-radius: 50%;
 }
 
-#contact .inner div p {
+.contact .inner div p {
   line-height: 1.5;
   font-size: 16px;
   margin-bottom: 30px;
+  color: var(--textColor);
 }
 
-#contact .inner div .info {}
+.contact .inner div .info {}
 
-#contact .inner div .info li {
+.contact .inner div .info li {
   font-size: 14px;
   font-weight: 500;
   line-height: 2;
@@ -942,28 +878,28 @@ body.dark-mode {
   box-shadow: 2px 3px 2px rgba(0, 0, 0, .2);
 }
 
-#contact .inner div .info li:nth-child(1) {
+.contact .inner div .info li:nth-child(1) {
   padding: 15px 30px;
 }
 
-#contact .inner div .info li:nth-child(2) {
+.contact .inner div .info li:nth-child(2) {
   transform: rotate(-3deg);
 }
 
-#contact .inner div .info li a {
+.contact .inner div .info li a {
   display: block;
   padding: 15px 30px;
   color: #000;
 }
 
-#contact .inner div .info li i {
+.contact .inner div .info li i {
   color: #000;
   font-size: 24px;
   margin-right: 20px;
   vertical-align: -3px;
 }
 
-#contact form {
+.contact form {
   width: 475px;
   /* height: 432px; */
   display: flex;
@@ -975,23 +911,23 @@ body.dark-mode {
   position: relative;
 }
 
-#contact form fieldset {
+.contact form fieldset {
   margin-bottom: 20px;
   border-bottom: 2px solid #fff;
 }
 
-#contact form fieldset:nth-child(3) label {
+.contact form fieldset:nth-child(3) label {
   vertical-align: top;
 }
 
-#contact form label {
+.contact form label {
   display: inline-block;
   width: 25%;
   text-transform: uppercase;
   font-size: 1.8rem;
 }
 
-#contact form input {
+.contact form input {
   width: 72%;
   padding: 15px 0;
   box-sizing: border-box;
@@ -1001,7 +937,7 @@ body.dark-mode {
   font-size: 1.6rem;
 }
 
-#contact form textarea {
+.contact form textarea {
   display: inline-block;
   width: 72%;
   padding: 10px 0;
@@ -1011,7 +947,7 @@ body.dark-mode {
   border: none;
 }
 
-#contact form .send--btn {
+.contact form .send--btn {
   border: transparent;
   padding: 20px;
   font-size: 20px;
@@ -1023,7 +959,7 @@ body.dark-mode {
   box-shadow: 2px 3px 2px rgb(0 0 0 / 20%);
 }
 
-#contact .thankyou_message {
+.contact .thankyou_message {
   padding: 40px 50px;
   background-color: var(--yellow-main);
   position: absolute;
@@ -1035,14 +971,14 @@ body.dark-mode {
   text-align: center;
 }
 
-#contact .thankyou_message h4 {
+.contact .thankyou_message h4 {
   font-size: 1.8rem;
   white-space: nowrap;
   text-align: center;
   line-height: 2;
 }
 
-#contact .thankyou_message .close--btn {
+.contact .thankyou_message .close--btn {
   display: inline-block;
   font-size: 1.4rem;
   font-weight: 600;

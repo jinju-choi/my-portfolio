@@ -9,74 +9,74 @@ html {
 .inner {
   padding: 50px 0;
 }
-#about .container {
+.about .container {
   height: auto;
 }
-#about .container:nth-child(1) {
+.about .container:nth-child(1) {
   height: 100vh;
 }
-#about .small-block {
+.about .small-block {
   display: block;
 }
-#about .intro-second .wrap {
+.about .intro-second .wrap {
   flex-wrap: wrap;
 }
-#about .intro-second .box {
+.about .intro-second .box {
   width: 85%;
   height: auto;
   padding: 19px 20px;
 }
-#about .intro-second .subject {
+.about .intro-second .subject {
   font-size: 4.0rem;
   margin-bottom: 10px;
 }
-#about .intro-second .box ul li {
+.about .intro-second .box ul li {
   font-size: 2.4rem;
 }
-#about .intro-second .box--todo {
+.about .intro-second .box--todo {
   transform: translate(0) rotate(-3deg);
 }
-#about .skill .skill__list li {
+.about .skill .skill__list li {
   height: 50px;
 }
-#about .skill .skill__list li:hover {
+.about .skill .skill__list li:hover {
   margin-top: 0;
   box-shadow: 3px 11px 7px rgb(0 0 0 / 27%);
   z-index: 1;
 }
-#about .skill .skill_item {
+.about .skill .skill_item {
   width: 220px;
   height: 48px;
 }
-#about .skill .skill__description {
+.about .skill .skill__description {
   bottom: unset;
   top: 18%;
 }
-#portfolio .portfolio-content {
+.portfolio .portfolio-content {
   padding: 80px 0 100px;
 }
-#portfolio .portfolio-content .portfolio-text {
+.portfolio .portfolio-content .portfolio-text {
   flex-direction: column;
   padding: 20px;
 }
-#portfolio .portfolio-content .portfolio-text .title {
+.portfolio .portfolio-content .portfolio-text .title {
   width: 100%;
   margin-bottom: 20px;
 }
-#portfolio .portfolio-content .portfolio-text .title h3 {
+.portfolio .portfolio-content .portfolio-text .title h3 {
   margin-right: 20px;
   display: block;
 }
-#portfolio .portfolio-content .portfolio-text .title p {
+.portfolio .portfolio-content .portfolio-text .title p {
   display: block;
 }
-#portfolio .portfolio-content .portfolio-text .description {
+.portfolio .portfolio-content .portfolio-text .description {
   width: unset;
 }
-#portfolio .portfolio-content .portfolio-text .description p:last-of-type {
+.portfolio .portfolio-content .portfolio-text .description p:last-of-type {
   margin-bottom: 20px;
 }
-#portfolio .portfolio-content .portfolio-text .portfolio-link {
+.portfolio .portfolio-content .portfolio-text .portfolio-link {
   position: inherit;
 }
 .portfolio-more {
@@ -92,25 +92,25 @@ html {
 .portfolio-more ul li p {
   display: none;
 }
-#contact .inner > div {
+.contact .inner > div {
   width: 100%;
 }
-#contact .inner div p {
+.contact .inner div p {
   font-size: 14px;
 }
-#contact .inner div .info li {
+.contact .inner div .info li {
 
 }
-#contact .inner div .info li {
+.contact .inner div .info li {
   font-size: 12px;
 }
-#contact .inner div .info li i {
+.contact .inner div .info li i {
   font-size: 14px;
 }
-#contact .inner div .info li:last-child {
+.contact .inner div .info li:last-child {
 
 }
-#contact form {
+.contact form {
   width: 100%;
 }
 .copyright {

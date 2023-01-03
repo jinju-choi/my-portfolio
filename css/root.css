@@ -1,3 +1,21 @@
+:root[color-theme='light'] {
+  --homeBg: #ffcc33;
+  --bgColor: #ffffff;
+  --bgColor2: #ffffff;
+  --title: #000000;
+  --textColor: #333333;
+  --bgOpacity: 0.7;
+}
+
+:root[color-theme='dark'] {
+  --homeBg: #444444;
+  --bgColor: #444444;
+  --bgColor2: #333333;
+  --title: #ffcc33;
+  --textColor: #eeeeee;
+  --bgOpacity: 0.3;
+}
+
 :root {
   --yellow-main : #ffcc33;
   --yellow-light: #fff5b1;
@@ -8,3 +26,4 @@
   --font-cally: 'Hi Melody', cursive;
   --font-cally-2: 'Nanum Pen Script', cursive;
 }
+

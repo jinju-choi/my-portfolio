@@ -437,7 +437,27 @@
 }
 
 .about .skill h3 {
-  margin-bottom: 150px;
+  margin-bottom: 70px;
+}
+
+.about .skill .hover-text {
+  font-family: 'Fredoka One', cursive !important;
+  font-size: 1.8rem;
+  color: #a8d5f6;
+  transform: translateY(0px);
+  animation: hover_text 1.5s infinite linear;
+}
+
+@keyframes hover_text {
+  30% {
+    transform: translateY(7px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(7px);
+  }
 }
 
 .about .skill .skill__list {
@@ -445,6 +465,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px 0;
+  margin-top: 30px;
 }
 
 .about .skill .skill__list li {
@@ -486,25 +507,19 @@
 }
 
 .about .skill .skill__list li:nth-child(6) {
-  background-color: #20232a;
-  color: #61dafb;
-  transform: rotate(3deg) translateX(2px);
-}
-
-.about .skill .skill__list li:nth-child(7) {
   background-color: #31A8FF;
   transform: rotate(-6deg) translateX(5px);
 }
 
-.about .skill .skill__list li:nth-child(8) {
+.about .skill .skill__list li:nth-child(7) {
   background-color: #FF9A00;
 }
 
-.about .skill .skill__list li:nth-child(9) {
+.about .skill .skill__list li:nth-child(8) {
   background-color: #333333;
 }
 
-.about .skill .skill__list li:nth-child(10) {
+.about .skill .skill__list li:nth-child(9) {
   background-color: #4e0039;
   transform: translateY(15px);
 }
@@ -875,6 +890,7 @@
 .contact .inner div .info {}
 
 .contact .inner div .info li {
+  padding: 15px 30px;
   font-size: 14px;
   font-weight: 500;
   line-height: 2;
@@ -892,7 +908,6 @@
 
 .contact .inner div .info li a {
   display: block;
-  padding: 15px 30px;
   color: #000;
 }
 

@@ -9,7 +9,7 @@ header {
   box-sizing: border-box;
   position: fixed;
   z-index: 5;
-  transition: left 0.5s;
+  transition: left 1s cubic-bezier(0.65, 0.05, 0.36, 1);
   transform: rotate(2deg) translate(-17px, -5px);
   box-shadow: 4px 4px 8px rgba(0,0,0,.2);
   left: -220px;

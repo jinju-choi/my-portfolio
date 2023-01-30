@@ -57,6 +57,7 @@ html {
 }
 
 .about .skill .skill__list li {
+  width: 50%;
   height: 50px;
 }
 
@@ -162,6 +163,10 @@ html {
 }
 
 .contact .inner div .info li:last-child {}
+
+.contact .inner .wrap {
+  flex-direction: column;
+}
 
 .contact form {
   width: 100%;

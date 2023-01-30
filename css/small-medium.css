@@ -16,6 +16,11 @@ html {
 /* .about .intro-second .box {
   width: 100%;
 } */
+
+.about .skill .skill__list li {
+  width: 31%;
+}
+
 .portfolio h3 {
   padding-top: 30px;
 }
@@ -61,14 +66,14 @@ html {
   height: 300px;
 }
 .contact .inner .wrap {
-  flex-direction: column;
   align-items: center;
+  gap: 18px;
 }
 .contact .inner div p {
   text-align: center;
 }
 .contact form {
-  width: 400px;
+  width: 350px;
   /* height: 365px; */
 }
 .contact form button {

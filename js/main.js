@@ -69,14 +69,13 @@ function headerOutAreaEvent(event) {
     if(target == event.currentTarget.querySelector('header')) {
       header.classList.add('active');
     }
-    else if(target == event.currentTarget.querySelector('.hambuger')) {
-      header.classList.add('active');
-      console.log('헤더영역이야');
-    }
   }
 }
 document.addEventListener('click',headerOutAreaEvent);
 
+hambuger.addEventListener('click', function(){
+  header.classList.toggle('active');
+});
 
 //gnb 클릭 섹션 스크롤링
 const section = document.getElementsByTagName('section');

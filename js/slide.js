@@ -23,5 +23,6 @@ if(window.innerWidth < 480) {
     loop: true,
     autoplay: true,
     slidesPerView: 2,
+    // centerSlides: true,
   });
 }

@@ -512,16 +512,18 @@
 }
 
 .about .skill .skill__list li:nth-child(7) {
+  transform: rotate(3deg);
   background-color: #FF9A00;
 }
 
 .about .skill .skill__list li:nth-child(8) {
+  transform: rotate(-3deg);
   background-color: #333333;
 }
 
 .about .skill .skill__list li:nth-child(9) {
   background-color: #4e0039;
-  transform: translateY(15px);
+  transform: rotate(2deg);
 }
 
 .about .skill .skill__list li:hover {
@@ -881,6 +883,7 @@
 }
 
 .contact .inner div p {
+  word-break: keep-all;
   line-height: 1.5;
   font-size: 16px;
   margin-bottom: 30px;
@@ -959,11 +962,14 @@
 .contact form textarea {
   display: inline-block;
   width: 72%;
-  padding: 10px 0;
+  padding: 0;
+  margin-bottom: 1.5rem;
   box-sizing: border-box;
   background-color: transparent;
   outline: none;
   border: none;
+  resize: none;
+  font-size: 1.6rem;
 }
 
 .contact form .send--btn {

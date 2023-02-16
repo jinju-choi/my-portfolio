@@ -266,16 +266,23 @@ if (window.innerWidth > 1200) {
 
 
 // 로딩
+const homeSection = document.querySelector('.home');
 const loader = document.createElement('div');
 loader.className = 'loader';
 document.body.append(loader);
 
 document.body.style.overflow = 'hidden';
 window.addEventListener('load', function () {
-  loader.style.opacity = '0';
   document.body.style.overflow = 'auto';
 
   setTimeout(() => {
+    loader.style.opacity = '0';
+  }, 1000);
+  
+  setTimeout(() => {
+    homeSection.classList.add('active');
     loader.style.display = 'none';
-  }, 400);
+  }, 1500);
+
+
 });

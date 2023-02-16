@@ -41,7 +41,7 @@
   justify-content: center;
   background: rgba(0, 0, 0, .6);
   opacity: 1;
-  transition: 0.5s;
+  transition: opacity 0.5s;
 }
 
 /* .loader::before {
@@ -120,7 +120,9 @@
   align-items: center;
 }
 
-.home .title {}
+.home .title {
+  opacity: 0;
+}
 
 .home .title h2 {
   color: var(--title);
@@ -134,10 +136,10 @@
   position: relative;
 }
 
-.home .title .title__item {
-  animation: title-ani 1.5s cubic-bezier(.23, 1, .32, 1) 1 forwards;
+.home.active .title .title__item {
   top: -50px;
   opacity: 0;
+  animation: title-ani 1.5s cubic-bezier(.23, 1, .32, 1) 1 forwards;
 }
 
 .home .title .title__item:nth-child(1) {
@@ -252,8 +254,13 @@
   transform: translate(50%, 50%);
   width: 400px;
   height: 400px;
-  animation: smile 4.5s cubic-bezier(.43, .14, .26, 1.17) 1s 1 both;
   z-index: 2;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.home .smile img {
+  width: 100%;
 }
 
 @keyframes smile {
@@ -284,11 +291,6 @@
   position: absolute;
   top: 37%;
   left: 54%;
-  animation-name: wink;
-  animation-delay: 0.5s;
-  animation-duration: 1.6s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 }
 
 @keyframes wink {
@@ -308,11 +310,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  background-image: url(../img/front.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  animation: text-roll 15s linear 4s infinite both;
-  transform-origin: 50% 50%;
 }
 
 @keyframes text-roll {
@@ -329,6 +326,34 @@
     transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
+
+/* active animation */
+.home.active .title {
+  opacity: 1;
+}
+
+.home.active .smile {
+  opacity: 1;
+  animation: smile 4.5s cubic-bezier(.43, .14, .26, 1.17) 1s 1 both;
+}
+
+.home.active .smile::before {
+  animation-name: wink;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.home.active .smile::after {
+  background-image: url(../img/front.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transform-origin: 50% 50%;
+  animation: text-roll 15s linear 4s infinite both;
+}
+
+/* --------------------- */
 
 .home .smile img {
   width: 100%;

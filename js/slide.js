@@ -10,24 +10,28 @@ new Swiper('.portfolio .mySwiper', {
   },
 });
 
-if(window.innerWidth > 798) {
-  new Swiper('.portfolio-more .swiper-container', {
-    breakpoints: {
-      798: {
-        loop: true,
-        autoplay: {
-          delay: 1000,
-        },
-        slidesPerView: 4,
+new Swiper('.portfolio-more .swiper-container', {
+  breakpoints: {
+    798: {
+      loop: true,
+      autoplay: {
+        delay: 1000,
       },
-      480: {
-        loop: true,
-        autoplay: true,
-        slidesPerView: 2,
-      }
+      slidesPerView: 3,
+      spaceBetween: 30,
+      centeredSlides: true,
+    },
+    280: {
+      loop: true,
+      autoplay: {
+        delay: 1000,
+      },
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+      centeredSlides: true,
     }
-  });
-}
+  }
+});
 
 // if(window.innerWidth < 480) {
 //   new Swiper('.portfolio-more .swiper-container', {

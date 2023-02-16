@@ -1,12 +1,12 @@
 //reload
-window.addEventListener('reload', function(){
+window.addEventListener('reload', function () {
   let scrollOffset = Math.floor(window.scrollY || document.documentElement.scrollTop);
   headerShow(scrollOffset);
   nav_act(scrollOffset);
 });
 
 //scroll
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   let windowY = Math.floor(window.scrollY || document.documentElement.scrollTop);
   headerShow(windowY);
   nav_act(windowY);
@@ -14,9 +14,15 @@ window.addEventListener('scroll', function() {
 });
 
 //resize시 재로딩
-window.addEventListener('resize', function(){
-  if (window.innerWidth < 1200) {
-    window.location.reload();
+const nowWidth = window.innerWidth;
+
+window.addEventListener('resize', function () {
+  const updateWidth = window.innerWidth;
+  if ((nowWidth > 1200 && updateWidth < 1200) || (nowWidth < 1200 && updateWidth > 1200) ) {
+    location.reload();
+  }
+  else if ((nowWidth > 768 && updateWidth < 768) || (nowWidth < 768 && updateWidth > 768) ) {
+    location.reload();
   }
 });
 
@@ -24,21 +30,21 @@ window.addEventListener('resize', function(){
 function headerShow(winTop) {
   let aboutTop = document.querySelector('.about').offsetTop;
 
-  if(window.innerWidth > 1200) {
-    if(winTop >= aboutTop){
-      header.style.left= '0';
+  if (window.innerWidth > 1200) {
+    if (winTop >= aboutTop) {
+      header.style.left = '0';
       // header.style.opacity= 1;
     } else {
-      header.style.left= '-100%';
+      header.style.left = '-100%';
       // header.style.opacity= 0;
     }
-  } 
+  }
 
-  if(window.innerWidth < 1200) {
-    if(winTop >= aboutTop){
-      header.style.opacity= 1;
+  if (window.innerWidth < 1200) {
+    if (winTop >= aboutTop) {
+      header.style.opacity = 1;
     } else {
-      header.style.opacity= 0;
+      header.style.opacity = 0;
       header.classList.remove('active');
     }
   }
@@ -47,7 +53,10 @@ function headerShow(winTop) {
 //header click scrolling
 const logo = document.querySelector('.logo');
 logo.addEventListener('click', () => {
-  window.scrollTo({top:0, behavior: 'smooth'});
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 })
 
 
@@ -61,19 +70,19 @@ let headerOpen = false;
 function headerOutAreaEvent(event) {
   const target = event.target;
 
-  if(window.innerWidth < 1200 ){
-    if(target !== event.currentTarget.querySelector('.hambuger')) {
+  if (window.innerWidth < 1200) {
+    if (target !== event.currentTarget.querySelector('.hambuger')) {
       header.classList.remove('active');
       console.log('헤더영역이 아냐');
-    } 
-    if(target == event.currentTarget.querySelector('header')) {
+    }
+    if (target == event.currentTarget.querySelector('header')) {
       header.classList.add('active');
     }
   }
 }
-document.addEventListener('click',headerOutAreaEvent);
+document.addEventListener('click', headerOutAreaEvent);
 
-hambuger.addEventListener('click', function(){
+hambuger.addEventListener('click', function () {
   header.classList.toggle('active');
 });
 
@@ -81,20 +90,26 @@ hambuger.addEventListener('click', function(){
 const section = document.getElementsByTagName('section');
 const gnbA = document.querySelector('.gnb').getElementsByTagName('a');
 
-Array.from(gnbA).forEach(function(element, index) {
+Array.from(gnbA).forEach(function (element, index) {
   element.removeAttribute('href');
-  element.addEventListener('click', function(){
+  element.addEventListener('click', function () {
     let sectionTop = section[index].offsetTop;
-    window.scrollTo({top:sectionTop, behavior: 'smooth'});
+    window.scrollTo({
+      top: sectionTop,
+      behavior: 'smooth'
+    });
   });
 });
 
 
 //home 다운버튼 클릭시 스크롤이동
 const homeDownBtn = document.querySelector('.down--button');
-homeDownBtn.addEventListener('click', function(){
+homeDownBtn.addEventListener('click', function () {
   let aboutTop = document.querySelector('.about').offsetTop;
-  window.scrollTo({top: aboutTop, behavior: 'smooth'});
+  window.scrollTo({
+    top: aboutTop,
+    behavior: 'smooth'
+  });
 });
 
 
@@ -105,13 +120,13 @@ function nav_act(winy) {
   let gnbA = document.querySelector('.gnb').getElementsByTagName('a');
 
   let ac_point = new Array;
-  Array.from(section).forEach(function(element,index) {
-    ac_point[index]= Math.floor(element.offsetTop);
+  Array.from(section).forEach(function (element, index) {
+    ac_point[index] = Math.floor(element.offsetTop);
   });
 
-  ac_point.forEach(function(element,index) {
-    if(element <= winy){
-      reset(gnbA ,"active");
+  ac_point.forEach(function (element, index) {
+    if (element <= winy) {
+      reset(gnbA, "active");
       gnbA[index].classList.add("active");
     }
   });
@@ -125,19 +140,19 @@ const osColorTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ?
 
 // const getUserTheme = () => (userColorTheme ? userColorTheme : osColorTheme);
 
-window.onload = function(){
-  if(userColorTheme === 'dark') {
+window.onload = function () {
+  if (userColorTheme === 'dark') {
     localStorage.setItem('color-theme', 'dark');
-    document.documentElement.setAttribute('color-theme','dark');
+    document.documentElement.setAttribute('color-theme', 'dark');
     darkModeBtn.setAttribute('checked', true);
   } else {
     localStorage.setItem('color-theme', 'light');
-    document.documentElement.setAttribute('color-theme','light');
+    document.documentElement.setAttribute('color-theme', 'light');
   }
 }
 
-darkModeBtn.addEventListener('click',function(e) {
-  if(e.target.checked) {
+darkModeBtn.addEventListener('click', function (e) {
+  if (e.target.checked) {
     localStorage.setItem('color-theme', 'dark');
     document.documentElement.setAttribute('color-theme', 'dark');
   } else {
@@ -150,19 +165,23 @@ darkModeBtn.addEventListener('click',function(e) {
 
 //스크롤시 나타남
 function isElementUnderBottom(elem, triggerDiff) {
-  const { top } = elem.getBoundingClientRect();
-  const { innerHeight } = window;
+  const {
+    top
+  } = elem.getBoundingClientRect();
+  const {
+    innerHeight
+  } = window;
   return top > innerHeight + (triggerDiff || 0);
-  
+
 }
 
 function handleScrollVeiwContents() {
   const elems = document.querySelectorAll('.up-on-scroll');
   let ch_point;
-  if(window.innerWidth > 768) {
+  if (window.innerWidth > 768) {
     ch_point = window.innerHeight / 3;
   }
-  if(window.innerWidth < 768) {
+  if (window.innerWidth < 768) {
     ch_point = window.innerHeight / 5;
   }
   elems.forEach(elem => {
@@ -175,7 +194,7 @@ function handleScrollVeiwContents() {
 }
 
 //remove class 함수
-function reset(content,className) {
+function reset(content, className) {
   Array.from(content).forEach(element => {
     element.classList.remove(className);
   });
@@ -184,11 +203,11 @@ function reset(content,className) {
 //skill hover
 const skill_list = document.querySelectorAll('.skill_item');
 const skill_description = document.querySelector('.skill__description').getElementsByTagName('li');
-skill_list.forEach(function(elem, index) {
-  elem.addEventListener('mouseover', function() {
+skill_list.forEach(function (elem, index) {
+  elem.addEventListener('mouseover', function () {
     skill_description[index].classList.add('hover');
   });
-  elem.addEventListener('mouseout', function() {
+  elem.addEventListener('mouseout', function () {
     skill_description[index].classList.remove('hover');
   });
 });
@@ -206,7 +225,7 @@ thanksCloseBtn.addEventListener('click', thanksBtnClose);
 
 
 //마우스 따라다니는 효과
-if ( window.innerWidth > 1200) {
+if (window.innerWidth > 1200) {
   const mouseCircle = document.createElement('div');
   mouseCircle.className = 'mouse-circle';
   document.body.appendChild(mouseCircle);
@@ -221,7 +240,7 @@ if ( window.innerWidth > 1200) {
     mouseY = eobj.clientY + document.documentElement.scrollTop;
 
     mouseCircle.style.left = mouseX + 15 + 'px';
-    mouseCircle.style.top = mouseY + 15 +'px';
+    mouseCircle.style.top = mouseY + 15 + 'px';
   }
   document.onmousemove = getMousePosition;
 }
@@ -238,7 +257,7 @@ if ( window.innerWidth > 1200) {
 //   // 부드럽게 따라오는 공식 대략..
 //   // 현재 이미지위치 = 현재이미지 위치 + (이미지 위치기준 마우스 커서 위치 / 적절한 나누기 값)
 //   // 반복 처리 해주면 됩니다.
-   
+
 //   // ※ 이미지 위치 기준 마우스 커서 위치란?
 //   // 이미지를 기준으로 그 이미지에서 커서가 얼마나 떨어져 있는지 여부
 // }

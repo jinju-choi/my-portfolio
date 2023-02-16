@@ -14,8 +14,8 @@ header .hambuger__item {
   display: block;
 }
 .home .smile {
-  width: 35vw;
-  height: 35vw;
+  width: 30vw;
+  height: 30vw;
 }
 .about .skill .skill__description {
   bottom: -15%;

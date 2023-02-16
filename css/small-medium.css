@@ -10,8 +10,7 @@ html {
 }
 .about .intro-second .box {
   width: 33%;
-  height: 247px;
-  padding: 33px 20px;
+  min-height: 39rem;
 }
 /* .about .intro-second .box {
   width: 100%;
@@ -19,6 +18,10 @@ html {
 
 .about .skill .skill__list li {
   width: 31%;
+}
+
+.about .intro-second .box__list li {
+  font-size: 2.2rem;
 }
 
 .portfolio h3 {
@@ -29,9 +32,11 @@ html {
   padding: 150px 0 150px
 }
 .portfolio .portfolio-content .portfolio-text {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
+  transform: rotate(2deg) translateY(1px);
 }
 .portfolio .portfolio-content:nth-of-type(2) .portfolio-text {
   text-align: left;
@@ -59,11 +64,15 @@ html {
   bottom: 20px;
 }
 .portfolio .portfolio-content .portfolio-images {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 .portfolio-more ul li {
   width: 220px;
   height: 300px;
+}
+.portfolio-more h3+p {
+  font-size: 2.2rem;
 }
 .contact .inner .wrap {
   align-items: center;
@@ -79,4 +88,9 @@ html {
 .contact form button {
   padding: 0;
   margin-top: 0;
+}
+
+.contact form label {
+  width: auto;
+  display: block;
 }

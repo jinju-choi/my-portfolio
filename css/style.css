@@ -630,6 +630,7 @@
 }
 
 .portfolio .portfolio-content .portfolio-text {
+  z-index: 1;
   vertical-align: bottom;
   padding: 30px;
   background-color: #d7f6ff;
@@ -713,7 +714,7 @@
 .portfolio-more {
   padding: 200px 0 200px 250px;
   position: relative;
-  height: 60vh;
+  height: auto;
   overflow: hidden;
 }
 
@@ -735,10 +736,9 @@
 }
 
 .portfolio-more .portfolio-slide-wrap {
-  position: absolute;
-  left: 0;
-  top: 57%;
+  position: initial;
   width: 100%;
+  margin-top: 9rem;
 }
 
 .portfolio-more .portfolio-slide-wrap.swiper {
@@ -748,7 +748,7 @@
 .portfolio-more ul {
   width: 100%;
   display: flex;
-  gap: 30px;
+  /* gap: 30px; */
   justify-content: space-between;
 }
 
@@ -958,7 +958,7 @@
   display: inline-block;
   width: 25%;
   text-transform: uppercase;
-  font-size: 1.8rem;
+  font-size: 15px;
 }
 
 .contact form input {
@@ -968,7 +968,7 @@
   background: transparent;
   outline: none;
   border: none;
-  font-size: 1.6rem;
+  font-size: 14px;
 }
 
 .contact form textarea {
@@ -981,7 +981,7 @@
   outline: none;
   border: none;
   resize: none;
-  font-size: 1.6rem;
+  font-size: 14px;
 }
 
 .contact form .send--btn {

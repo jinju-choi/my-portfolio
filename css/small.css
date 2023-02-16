@@ -1,5 +1,5 @@
 html {
-  font-size: 5px;
+  font-size: 6px;
 }
 
 .container {
@@ -16,6 +16,14 @@ html {
   display: none;
 }
 
+.h3-font {
+  font-size: 4rem;
+}
+
+.home .title h2 span {
+  font-size: 7rem;
+}
+
 .about .container {
   height: auto;
 }
@@ -30,6 +38,14 @@ html {
 
 .about .small-block {
   display: block;
+}
+
+.about .intro-first .intro__main {
+  font-size: 3.2rem;
+}
+
+.about .intro-first .intro__main strong {
+  font-size: 3.8rem;
 }
 
 .about .intro-second .wrap {
@@ -58,7 +74,7 @@ html {
 
 .about .skill .skill__list li {
   width: 50%;
-  height: 50px;
+  height: 7rem;
 }
 
 .about .skill .skill__list li:hover {
@@ -125,12 +141,28 @@ html {
   top: unset;
 }
 
+.portfolio .portfolio-content .portfolio-images {
+  width: 100%;
+}
+
+.portfolio .portfolio-content .portfolio-text {
+  width: 100%;
+}
+
 .portfolio-more ul li {
   height: 200px;
 }
 
 .portfolio-more ul li p {
   display: none;
+}
+
+.portfolio-more ul li:hover {
+  transform: translateY(0);
+}
+
+.portfolio-more .swiper-slide.swiper-slide-active {
+  transform: translateY(-20px);
 }
 
 .contact .inner>div {
@@ -150,7 +182,9 @@ html {
 }
 
 .contact .inner div .info li {
-  font-size: 12px;
+  display: flex;
+  align-items: center;
+  font-size: 2.2rem;
 }
 
 .contact .inner div .info li:nth-child(1) {

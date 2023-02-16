@@ -29,6 +29,78 @@
   animation: font-right;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .6);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/* .loader::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: red;
+  animation-name: smile-roll;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+} */
+
+.loader::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(rgb(255, 213, 0) 30%, transparent 15%),
+    radial-gradient(hsla(0, 0%, 0%, .3), transparent 35%);
+  background-position: 50% 50%, 50% calc(50% + 1.5em);
+  background-size: 8em 8em, 10em 3em;
+  background-repeat: no-repeat;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    background-position: 50% calc(50% - 8em), 50% calc(50% + 2.2em);
+    background-size: 8em 8em, 3em 3em;
+  }
+
+  40% {
+    background-position: 50% 50%, 50% calc(50% + 1.5em);
+    background-size: 8em 8em, 10em 3em;
+  }
+
+  43% {
+    background-position: 50% 50%, 50% calc(50% + 1.5em);
+    background-size: 8em 5em, 10em 3em;
+  }
+
+  45% {
+    background-position: 50% 50%, 50% calc(50% + 1.5em);
+    background-size: 8em 3.5em, 10em 3em;
+  }
+
+  50% {
+    background-position: 50% 50%, 50% calc(50% + 1.5em);
+    background-size: 8em 5em, 10em 3em;
+  }
+
+  100% {
+    background-position: 50% calc(50% - 8em), 50% calc(50% + 1.7em);
+    background-size: 8em 8em, 3em 3em;
+  }
+}
+
 /* =============== home ==================== */
 .home {
   background: var(--homeBg);
@@ -452,9 +524,11 @@
   30% {
     transform: translateY(7px);
   }
+
   50% {
     transform: translateY(4px);
   }
+
   100% {
     transform: translateY(7px);
   }
@@ -908,6 +982,7 @@
 .contact .inner div .info li:nth-child(2) {
   transform: rotate(-3deg);
 }
+
 .contact .inner div .info li:nth-child(4) {
   transform: rotate(3deg);
 }
@@ -930,7 +1005,7 @@
 }
 
 .contact .inner div .info li:hover i {
-  transform: scale(1.1);  
+  transform: scale(1.1);
 }
 
 .contact form {

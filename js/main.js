@@ -18,10 +18,9 @@ const nowWidth = window.innerWidth;
 
 window.addEventListener('resize', function () {
   const updateWidth = window.innerWidth;
-  if ((nowWidth > 1200 && updateWidth < 1200) || (nowWidth < 1200 && updateWidth > 1200) ) {
+  if ((nowWidth > 1200 && updateWidth < 1200) || (nowWidth < 1200 && updateWidth > 1200)) {
     location.reload();
-  }
-  else if ((nowWidth > 768 && updateWidth < 768) || (nowWidth < 768 && updateWidth > 768) ) {
+  } else if ((nowWidth > 768 && updateWidth < 768) || (nowWidth < 768 && updateWidth > 768)) {
     location.reload();
   }
 });
@@ -263,3 +262,20 @@ if (window.innerWidth > 1200) {
 // }
 
 // setInterval("moveImg()", 50); // moveImg 함수 반복 실행하여 이미지 움직이기
+
+
+
+// 로딩
+const loader = document.createElement('div');
+loader.className = 'loader';
+document.body.append(loader);
+
+document.body.style.overflow = 'hidden';
+window.addEventListener('load', function () {
+  loader.style.opacity = '0';
+  document.body.style.overflow = 'auto';
+
+  setTimeout(() => {
+    loader.style.display = 'none';
+  }, 400);
+});

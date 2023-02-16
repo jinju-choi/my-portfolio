@@ -12,17 +12,28 @@ new Swiper('.portfolio .mySwiper', {
 
 if(window.innerWidth > 798) {
   new Swiper('.portfolio-more .swiper-container', {
-    loop: true,
-    autoplay: true,
-    slidesPerView: 4,
+    breakpoints: {
+      798: {
+        loop: true,
+        autoplay: {
+          delay: 1000,
+        },
+        slidesPerView: 4,
+      },
+      480: {
+        loop: true,
+        autoplay: true,
+        slidesPerView: 2,
+      }
+    }
   });
 }
 
-if(window.innerWidth < 480) {
-  new Swiper('.portfolio-more .swiper-container', {
-    loop: true,
-    autoplay: true,
-    slidesPerView: 2,
-    // centerSlides: true,
-  });
-}
+// if(window.innerWidth < 480) {
+//   new Swiper('.portfolio-more .swiper-container', {
+//     loop: true,
+//     autoplay: true,
+//     slidesPerView: 2,
+//     // centerSlides: true,
+//   });
+// }

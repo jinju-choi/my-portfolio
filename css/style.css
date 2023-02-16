@@ -41,7 +41,7 @@
   justify-content: center;
   background: rgba(0, 0, 0, .6);
   opacity: 1;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
 }
 
 /* .loader::before {
@@ -61,38 +61,33 @@
   width: 100%;
   height: 100%;
   background-image:
-    radial-gradient(rgb(255, 213, 0) 30%, transparent 15%),
+    radial-gradient(var(--yellow-main) 30%, transparent 15%),
     radial-gradient(hsla(0, 0%, 0%, .3), transparent 35%);
-  background-position: 50% 50%, 50% calc(50% + 1.5em);
+  background-position: 50% 50%, 50% calc(50% + 1.3em);
   background-size: 8em 8em, 10em 3em;
   background-repeat: no-repeat;
-  animation: bounce 1s infinite;
+  animation: bounce 0.9s infinite ease-in-out;
 }
 
 @keyframes bounce {
   0% {
     background-position: 50% calc(50% - 8em), 50% calc(50% + 2.2em);
-    background-size: 8em 8em, 3em 3em;
+    background-size: 8em 8em, 4em 3em;
   }
 
-  40% {
-    background-position: 50% 50%, 50% calc(50% + 1.5em);
-    background-size: 8em 8em, 10em 3em;
-  }
-
-  43% {
-    background-position: 50% 50%, 50% calc(50% + 1.5em);
-    background-size: 8em 5em, 10em 3em;
+  30% {
+    background-position: 50% 50%, 50% calc(50% + 1.3em);
+    background-size: 8em 7em, 10em 3em;
   }
 
   45% {
-    background-position: 50% 50%, 50% calc(50% + 1.5em);
-    background-size: 8em 3.5em, 10em 3em;
+    background-position: 50% 50%, 50% calc(50% + 1.3em);
+    background-size: 8em 4em, 10em 3em;
   }
 
-  50% {
-    background-position: 50% 50%, 50% calc(50% + 1.5em);
-    background-size: 8em 5em, 10em 3em;
+  60% {
+    background-position: 50% 50%, 50% calc(50% + 1.3em);
+    background-size: 8em 6em, 10em 3em;
   }
 
   100% {
@@ -256,7 +251,7 @@
   height: 400px;
   z-index: 2;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
 }
 
 .home .smile img {
@@ -310,11 +305,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  opacity: 0;
 }
 
 @keyframes text-roll {
   0% {
-    opacity: 0;
     transform: translate(-50%, -50%) rotate(0);
   }
 
@@ -323,6 +318,7 @@
   }
 
   100% {
+    opacity: 1;
     transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
@@ -433,6 +429,10 @@
   bottom: 10%;
   right: -55px;
   transform: rotate(-22deg);
+}
+
+@keyframes identifier {
+  
 }
 
 .about .intro-first .intro__main {
@@ -835,13 +835,9 @@
 }
 
 .portfolio-more .portfolio-slide-wrap {
-  position: initial;
+  /* position: initial; */
   width: 100%;
   margin-top: 9rem;
-}
-
-.portfolio-more .portfolio-slide-wrap.swiper {
-  overflow: initial;
 }
 
 .portfolio-more ul {
@@ -1013,7 +1009,7 @@
 }
 
 .contact .inner div .info li a {
-  display: block;
+  /* display: block; */
   color: #000;
 }
 
@@ -1026,7 +1022,7 @@
   font-size: 24px;
   margin-right: 15px;
   vertical-align: -3px;
-  transition: 0.3s;
+  transition: 0.3s ease-out;
 }
 
 .contact .inner div .info li:hover i {

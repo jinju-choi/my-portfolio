@@ -224,25 +224,25 @@ thanksCloseBtn.addEventListener('click', thanksBtnClose);
 
 
 //마우스 따라다니는 효과
-if (window.innerWidth > 1200) {
-  const mouseCircle = document.createElement('div');
-  mouseCircle.className = 'mouse-circle';
-  document.body.appendChild(mouseCircle);
+// if (window.innerWidth > 1200) {
+//   const mouseCircle = document.createElement('div');
+//   mouseCircle.className = 'mouse-circle';
+//   document.body.appendChild(mouseCircle);
 
-  //마우스 커서 위치 담는 변수
-  let mouseX = 0;
-  let mouseY = 0;
+//   //마우스 커서 위치 담는 변수
+//   let mouseX = 0;
+//   let mouseY = 0;
 
-  function getMousePosition(e) {
-    let eobj = window.event ? window.event : e; //IE, FF에 따라 이벤트 처리
-    mouseX = eobj.clientX;
-    mouseY = eobj.clientY + document.documentElement.scrollTop;
+//   function getMousePosition(e) {
+//     let eobj = window.event ? window.event : e; //IE, FF에 따라 이벤트 처리
+//     mouseX = eobj.clientX;
+//     mouseY = eobj.clientY + document.documentElement.scrollTop;
 
-    mouseCircle.style.left = mouseX + 15 + 'px';
-    mouseCircle.style.top = mouseY + 15 + 'px';
-  }
-  document.onmousemove = getMousePosition;
-}
+//     mouseCircle.style.left = mouseX + 15 + 'px';
+//     mouseCircle.style.top = mouseY + 15 + 'px';
+//   }
+//   document.onmousemove = getMousePosition;
+// }
 
 // function moveImg(){
 //   // 이미지 위치 파악하기
@@ -272,14 +272,15 @@ loader.className = 'loader';
 document.body.append(loader);
 
 document.body.style.overflow = 'hidden';
-window.addEventListener('load', function () {
-  document.body.style.overflow = 'auto';
 
+window.addEventListener('load', function () {
+  
   setTimeout(() => {
     loader.style.opacity = '0';
   }, 1000);
   
   setTimeout(() => {
+    document.body.style.overflow = 'auto';
     homeSection.classList.add('active');
     loader.style.display = 'none';
   }, 1500);

@@ -14,18 +14,14 @@ new Swiper('.portfolio-more .swiper-container', {
   breakpoints: {
     798: {
       loop: true,
-      autoplay: {
-        delay: 1000,
-      },
+      autoplay: true,
       slidesPerView: 3,
       spaceBetween: 30,
       centeredSlides: true,
     },
     280: {
       loop: true,
-      autoplay: {
-        delay: 1000,
-      },
+      autoplay: true,
       slidesPerView: 1.5,
       spaceBetween: 20,
       centeredSlides: true,

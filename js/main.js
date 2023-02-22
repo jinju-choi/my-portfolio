@@ -32,11 +32,9 @@ function headerShow(winTop) {
 
   if (window.innerWidth > 1200) {
     if (winTop >= aboutTop) {
-      header.style.left = '0';
-      // header.style.opacity= 1;
+      header.classList.add('active');
     } else {
-      header.style.left = '-100%';
-      // header.style.opacity= 0;
+      header.classList.remove('active');
     }
   }
 

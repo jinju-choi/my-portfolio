@@ -25,6 +25,7 @@ window.addEventListener('resize', function () {
   }
 });
 
+
 //about section 진입 헤더 show
 function headerShow(winTop) {
   let aboutTop = document.querySelector('.about').offsetTop;
@@ -47,6 +48,7 @@ function headerShow(winTop) {
       header.classList.remove('active');
     }
   }
+
 }
 
 //header click scrolling
@@ -186,8 +188,10 @@ function handleScrollVeiwContents() {
   elems.forEach(elem => {
     if (isElementUnderBottom(elem, -ch_point)) {
       elem.classList.add('show');
+      elem.classList.remove('hide');
     } else {
       elem.classList.remove('show');
+      elem.classList.add('hide');
     }
   });
 }

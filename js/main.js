@@ -134,6 +134,9 @@ function nav_act(winy) {
 
 //다크모드
 const darkModeBtn = document.querySelector('.dark-button input');
+const colorThemeBtn = document.querySelector('.color-theme-btn');
+const lightBtn = document.getElementById('light-mode');
+const darkBtn = document.getElementById('dark-mode');
 const userColorTheme = localStorage.getItem('color-theme');
 const osColorTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
@@ -143,20 +146,32 @@ window.onload = function () {
   if (userColorTheme === 'dark') {
     localStorage.setItem('color-theme', 'dark');
     document.documentElement.setAttribute('color-theme', 'dark');
-    darkModeBtn.setAttribute('checked', true);
+    darkBtn.setAttribute('checked', true);
   } else {
     localStorage.setItem('color-theme', 'light');
+    lightBtn.setAttribute('checked', true);
     document.documentElement.setAttribute('color-theme', 'light');
   }
 }
 
-darkModeBtn.addEventListener('click', function (e) {
-  if (e.target.checked) {
-    localStorage.setItem('color-theme', 'dark');
-    document.documentElement.setAttribute('color-theme', 'dark');
-  } else {
+// darkModeBtn.addEventListener('click', function (e) {
+//   if (e.target.checked) {
+//     localStorage.setItem('color-theme', 'dark');
+//     document.documentElement.setAttribute('color-theme', 'dark');
+//   } else {
+//     localStorage.setItem('color-theme', 'light');
+//     document.documentElement.setAttribute('color-theme', 'light');
+//   }
+
+// });
+
+colorThemeBtn.addEventListener('click', function (e) {
+  if (lightBtn.checked) {
     localStorage.setItem('color-theme', 'light');
     document.documentElement.setAttribute('color-theme', 'light');
+  } else if (darkBtn.checked){
+    localStorage.setItem('color-theme', 'dark');
+    document.documentElement.setAttribute('color-theme', 'dark');
   }
 
 });

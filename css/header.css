@@ -48,29 +48,35 @@ header .gnb ul li {
 }
 
 header .gnb ul li a {
+  position: relative;
   color: var(--textColor);
   font-size: 20px;
   display: block;
+  font-style: italic;
   line-height: 1.5;
   transition: 0.5s;
   cursor: pointer;
 }
 
 header .gnb ul li a.active {
-  font-style: italic;
-  position: relative;
+}
+
+header .gnb ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 22px;
+  background: var(--yellow-neon);
+  transform: skew(-10deg);
+  opacity: var(--bgOpacity);
+  transition: 0.7s;
+  z-index: -1;
 }
 
 header .gnb ul li a.active::after {
-  content: "";
-  position: absolute;
-  left: 7px;
-  bottom: 0;
-  width: 80%;
-  height: 22px;
-  background: var(--yellow-neon);
-  opacity: var(--bgOpacity);
-  z-index: -1;
+  width: 100%;
 }
 
 header .gnb ul li a:hover {
@@ -114,6 +120,7 @@ header .gnb ul li a:hover {
   left: calc(100% - 30px);
   opacity: 0.4;
 } */
+
 .d-mode--btn .d-mode--switch {
   display: block;
   width: 35px;
@@ -180,58 +187,52 @@ header .gnb ul li a:hover {
 
 .color-theme-btn input[type="radio"]+label {
   position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
   cursor: pointer;
   text-align: center;
   color: var(--textColor);
-}
-
-.color-theme-btn input[type="radio"]+label::before {
-  content: "";
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-}
-
-/* .color-theme-btn input[type="radio"]:checked+label::before {
-  filter: invert(54%) sepia(87%) saturate(43) hue-rotate(39deg) brightness(158%) contrast(100%);
-} */
-
-.color-theme-btn input[type="radio"]+label[for="light-mode"]::before {
-  background-image: url("../img/light_mode.png");
-  filter: invert(98%) sepia(0%) saturate(0%) hue-rotate(134deg) brightness(247%) contrast(12%);
-}
-
-.color-theme-btn input[type="radio"]:checked+label[for="light-mode"]::before {
-  filter: invert(54%) sepia(87%) saturate(43) hue-rotate(39deg) brightness(158%) contrast(100%);
-}
-
-.color-theme-btn input[type="radio"]+label[for="dark-mode"]::before {
-  background-image: url("../img/dark_mode.png");
-  filter: invert(98%) sepia(0%) saturate(0%) hue-rotate(134deg) brightness(247%) contrast(12%);
-}
-.color-theme-btn input[type="radio"]:checked+label[for="dark-mode"]::before {
-  filter: invert(54%) sepia(87%) saturate(43) hue-rotate(39deg) brightness(158%) contrast(100%);
+  box-sizing: border-box;
 }
 
 .color-theme-btn input[type="radio"]+label::after {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 0;
   content: "";
-  display: block;
-  width: 2.7rem;
-  height: 2.7rem;
-  border: 2px dashed transparent;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  transition: border 0.5s;
+  width: 0;
+  height: 50%;
+  transform: translateY(-50%) skew(-10deg);
+  background: transparent;
+  opacity: var(--bgOpacity);
+  transition: 0.5s;
 }
 
 .color-theme-btn input[type="radio"]:checked+label::after {
-  border-color: #d7f6ff;
+  width: 100%;
+  background: var(--yellow-neon);
+}
+
+.color-theme-btn input[type="radio"]+label::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  filter: invert(98%) sepia(0%) saturate(0%) hue-rotate(134deg) brightness(247%) contrast(12%);
+}
+
+.color-theme-btn input[type="radio"]+label[for="light-mode"]::before {
+  background-image: url("../img/light_mode.png");
+
+}
+
+.color-theme-btn input[type="radio"]+label[for="dark-mode"]::before {
+  background-image: url("../img/dark_mode.png");
 }
 
 header .hambuger {

@@ -201,6 +201,7 @@ header .gnb ul li a:hover {
   position: absolute;
   top: 50%;
   left: 0;
+  z-index: -1;
   content: "";
   width: 0;
   height: 50%;
